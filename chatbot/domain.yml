@@ -1,0 +1,53 @@
+version: "3.1"
+intents:
+  - affirm
+  - bot_challenge
+  - deny
+  - goodbye
+  - greet
+  - mood_great
+  - mood_unhappy
+  - procuracao:
+      is_retrieval_intent: true
+      used_entities: []
+  - procuracao/fazer
+  - procuracao/oque
+responses:
+  utter_askname:
+    - text: Hello, what's your name?
+  utter_askage:
+    - text: Whats your age?
+  utter_greet:
+    - text: Hey! How are you?
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+    - text: Did that help you?
+  utter_happy:
+    - text: Great, carry on!
+  utter_goodbye:
+    - text: Bye
+  utter_iamabot:
+    - text: I am a bot, powered by Rasa.
+  utter_procuracao/oque:
+    - text: Procuração é o ato pelo qual uma pessoa atribui a outra, voluntariamente, o poder de agir em seu nome.
+  utter_procuracao/fazer:
+    - text: |-
+        Diga-me o seu nome completo, número de BI ou CC com data de emissão e a sua morada atual. 
+
+         Atenção: Escreve uma informação por linha.
+  utter_procuracao/pronta:
+    - text: |-
+        Segue a minuta:
+         Eu, {nome_outorgante}, portador(a) do BI/CC n. {documento_outorgante}, residente {morada_outorgante} nomeio como meu/minha procurador(a)
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+  - utter_askname
+  - utter_askage
+  - utter_greet
+  - utter_procuracao/oque
+  - utter_procuracao/fazer
+  - utter_procuracao
