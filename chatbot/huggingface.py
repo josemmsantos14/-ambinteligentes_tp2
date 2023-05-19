@@ -2,7 +2,7 @@ from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 import torch
 
 classifier = pipeline("sentiment-analysis")
-print(classifier("I've been waiting for a HuggingFace course my whole life!"))
+# print(classifier("I've been waiting for a HuggingFace course my whole life!"))
 
 tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small")
