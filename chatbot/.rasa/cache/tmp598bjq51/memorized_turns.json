@@ -1,0 +1,13 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpeSZQMAVmXlp+UW5tbWxAP14Tt8=": "utter_askname",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpeSZQMAVmXlp+UW5xDkjsTgbxMVtSCwAz91pLg==": "action_listen",
+    "eJydjlEKgCAQBa+yB+gEXiVCJLaQco11DUK8e5b9G/69gWF4Y8oDpIPx1GYW60lBqkOTcajgg90GQSpuDMjFsVRQFKyMKLnRiCLIuqp9hcYLS4tn9++GCduDvZHGk2CuV8x5ugG/p4Q4": "utter_askage",
+    "eJydjlsKgCAQRbfiAlqBW4mQIaaQaoxxCkLce/aAfgLFv3vhcDhtiI0KK+NuoBfrSKvwDEOwoFbvma0XpMRuHjkxltIVrUZGlJhxbCLI5kHrDJkKS4PjpSwD/HTdWkmmxMNxg8UtMP6kfJbuBJAPntU=": "action_listen",
+    "eJydjlEKgCAQBa/iATqBV4mQJTaRao11C0K8e1p9Bkp/78EwTB9Tp+LGeBgYxXnSKj7DEKyo1XsWFwQps3tAzoyjfEUry4iSKo5dBNk86D9DpcLR5Hlty4Awl/tXUikJcN5gcwvYj5RWS0NM8afhAqf1uWs=": "utter_happy",
+    "eJydjlEKhDAMBa/SA3iCXkWkBIlado0lTQUp3n3rup+LDf17D4Zh+nx2JgfG3cEofiNr8j0cwYrW/M7bR0EqbIrIhfFUrlgzM6KcFUcSQXY32maoVHiaNl51GRBf122VVEoiHF9Q3QLznxStRRFz+VUtC4RwPDiGD1/J00o=": "action_listen"
+  }
+}

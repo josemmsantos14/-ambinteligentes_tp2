@@ -1,36 +1,100 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - inform
-  - say_name
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
+- affirm
+- bot_challenge
+- deny
+- goodbye
+- greet
+- inform
+- mood_great
+- mood_unhappy
+- reason_unhappy
+- say_age
+- say_name
+- info_diseases
+- disease_bipolar
+- disease_anxiety
+- info_symptoms
+- info_diagnosis
+- info_treatment
+slots:
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: name
+  age:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: age
+entities:
+- name
+- age
 responses:
   utter_greet:
-    - text: "Hey! How are you?"
-    - text: "Hello! How is your day going?"
-
+  - text: Hey!
+  - text: Hello!
+  utter_askmood:
+  - text: How are you?
+  - text: How is your day going?
   utter_askname:
-    - text: "Whats your name?"
-
+  - text: Whats your name?
   utter_askage:
-    - text: "Nice! What about your age?"
-
+  - text: Nice! What about your age?
   utter_happy:
+    - condition:
+        - type: slot
+          name: name
+          value: true
+      text: "Great, carry on {name}!"
+
     - text: "Great, carry on!"
-
+  utter_askunhappy:
+  - text: Can you tell me what happened?
+  - text: Why are you unhappy?
+  utter_cheerup:
+  - text: Do you need cheering up?
+  utter_funnyimage:
+  - text: Here's something to make you happy!
+    image: i.imgur.com/nGF1K8f.jpg
+  utter_knowmore:
+  - text: "Would you like to know more about any of these mental ilnesses?"
+    buttons:
+    - title: "Bipolar Disorder"
+      payload: "/disease_bipolar"
+    - title: "Anxiety"
+      payload: "/disease_anxiety"
+  utter_disease_bipolar:
+    - text: "Bipolar disorder is a mental health condition characterized by extreme mood swings. It involves episodes of high energy and euphoria (mania) as well as episodes of low mood and sadness (depression). People with bipolar disorder may experience changes in sleep, energy levels, and behavior. Treatment usually involves medication and therapy to help manage symptoms and stabilize mood."
+  utter_bipolar_symptoms:
+    - text: "Bipolar disorder involves shifts in mood, energy, and activity levels.
+            Manic episodes: Elevated mood, increased energy, racing thoughts, decreased need for sleep, impulsive behavior.
+            Depressive episodes: Persistent sadness, loss of interest, changes in appetite and sleep, difficulty concentrating.
+            Mixed episodes: Symptoms of both mania and depression occurring at the same time, leading to agitation and intense mood swings."
+  utter_bipolar_diagnosis:
+    - text: "Bipolar disorder diagnosis involves a thorough evaluation by a mental health professional. 
+            They assess symptoms, medical history, and family history. 
+            Diagnostic criteria from the DSM-5 are used to determine if symptoms align with bipolar disorder. 
+            Mood patterns, medical evaluations, psychosocial factors, and collateral information are considered. 
+            An accurate diagnosis is crucial for effective treatment. Seeking professional help is recommended for those suspecting bipolar disorder."
+  utter_bipolar_treatment:
+    - text: "Bipolar disorder treatment involves medication, therapy (such as CBT), and lifestyle adjustments. 
+            Medication helps stabilize mood, therapy aids in understanding and managing symptoms, and lifestyle changes include maintaining a routine, reducing stress, and seeking support. 
+            Close collaboration with healthcare professionals is essential for developing a personalized treatment plan."
   utter_goodbye:
-    - text: "Bye"
-
+  - text: Bye
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-
+  - text: I am a bot, powered by Rasa.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+actions:
+- utter_askmood
+- utter_askage
+- utter_askname
+- utter_greet
+- action_show_image
+- utter_knowmore

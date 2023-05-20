@@ -25,3 +25,16 @@ class ActionHelloWorld(Action):
         dispatcher.utter_message(text="Hello World!")
 
         return []
+    
+class ActionShowImage(Action):
+
+    def name(self) -> Text:
+        return "action_show_image"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(image="https://i.imgur.com/nGF1K8f.jpg")
+
+        return []

@@ -1,102 +1,128 @@
 version: "3.1"
-
 nlu:
-  - intent: say_name
-    examples: |
-      - jose
-      - luisa
-      - mariana
-
-  - intent: inform
-    examples: |
-      - fine
-      - well
-
-  - intent: greet
-    examples: |
-      - hey
-      - hello
-      - hi
-      - hello there
-      - good morning
-      - good evening
-      - moin
-      - hey there
-      - let's go
-      - hey dude
-      - goodmorning
-      - goodevening
-      - good afternoon
-
-  - intent: goodbye
-    examples: |
-      - cu
-      - good by
-      - cee you later
-      - good night
-      - bye
-      - goodbye
-      - have a nice day
-      - see you around
-      - bye bye
-      - see you later
-
-  - intent: affirm
-    examples: |
-      - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
-
-  - intent: deny
-    examples: |
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
-
-  - intent: mood_great
-    examples: |
-      - perfect
-      - great
-      - amazing
-      - feeling like a king
-      - wonderful
-      - I am feeling very good
-      - I am great
-      - I am amazing
-      - I am going to save the world
-      - super stoked
-      - extremely good
-      - so so perfect
-      - so good
-      - so perfect
-
-  - intent: mood_unhappy
-    examples: |
-      - my day was horrible
-      - I am sad
-      - I don't feel very well
-      - I am disappointed
-      - super sad
-      - I'm so sad
-      - sad
-      - very sad
-      - unhappy
-      - not good
-      - not very good
-      - extremly sad
-      - so saad
-      - so sad
-
-  - intent: bot_challenge
-    examples: |
-      - are you a bot?
-      - are you a human?
-      - am I talking to a bot?
-      - am I talking to a human?
+- intent: say_name
+  examples: |
+    - My name is [Mariana](name).
+    - I'm [Luísa](name).
+    - [José](name)
+    - My name is [Mariana](name).
+- intent: say_age
+  examples: |
+    - [21](age)
+    - My age is [22](age).
+    - I'm [23](age) years old.
+    - I'm [21](age) years old.
+- intent: inform
+  examples: |
+    - fine
+    - well
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: reason_unhappy
+  examples: |
+    - i've been having a bad day
+    - i'm feeling stressed
+    - my grades are bad
+    - i have no friends
+- intent: info_diseases
+  examples: |
+    - i would like to know more about mental ilness
+    - do you have information about mental ilness
+    - mental ilness information
+- intent: info_symptoms
+  examples: |
+    - what are the associated symptoms?
+    - can you tell me the symptoms?
+    - symptoms
+- intent: info_diagnosis
+  examples: |
+    - how's the diagnosis?
+    - how is it diagnosed?
+    - can you tell me about the diagnosis?
+    - diagnosis
+- intent: info_treatment 
+  examples: |
+    - how's the treatment?
+    - how is it treated?
+    - can you tell me about the treatment?
+    - treatment
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

@@ -5,10 +5,55 @@ stories:
     steps:
       - intent: greet
       - action: utter_greet
-      - intent: inform
       - action: utter_askname
       - intent: say_name
+        entities:
+        - name: Mariana
+      - slot_was_set:
+        - name: Mariana
       - action: utter_askage
+      - intent: say_age
+        entities:
+        - age: '21'
+      - slot_was_set:
+        - age: '21'
+      - action: utter_askmood
+      - checkpoint: checkpoint_introduction
+
+  - story: happy mood
+    steps:
+      - checkpoint: checkpoint_introduction
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad mood
+    steps:
+      - checkpoint: checkpoint_introduction
+      - intent: mood_unhappy
+      - action: utter_askunhappy
+      - intent: reason_unhappy
+      - action: utter_cheerup
+      - intent: affirm
+      - action: action_show_image
+
+  - story: mental ilness info
+    steps:
+      - intent: info_diseases
+      - action: utter_knowmore
+      - checkpoint: disease_chosen
+
+  - story: bipolar disorder
+    steps:
+      - checkpoint: disease_chosen
+      - intent: disease_bipolar
+      - action: utter_disease_bipolar
+      - intent: info_symptoms
+      - action: utter_bipolar_symptoms
+      - intent: info_diagnosis
+      - action: utter_bipolar_diagnosis
+      - intent: info_treatment
+      - action: utter_bipolar_treatment
+
 
   # - story: happy path
   #   steps:
