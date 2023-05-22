@@ -14,9 +14,12 @@ intents:
 - info_diseases
 - disease_bipolar
 - disease_anxiety
-- info_symptoms
-- info_diagnosis
-- info_treatment
+- disease_depression
+- disease_none
+- bad_mood_anxiety
+# - info_symptoms
+# - info_diagnosis
+# - info_treatment
 slots:
   name:
     type: text
@@ -30,9 +33,17 @@ slots:
     mappings:
     - type: from_entity
       entity: age
+  feeling:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: feeling
 entities:
 - name
 - age
+- feeling
+
 responses:
   
   utter_greet:
@@ -69,29 +80,73 @@ responses:
     - title: None of these
       payload: "/disease_none"
 
+  utter_knowmore:
+  - text: "Would you like to know more about that condition?"
+
+  utter_moreaboutanxiety:
+  - text: "Anxiety is a normal reaction to danger or everyday stress. 
+  It is a feeling of fear or concern about a potential negative outcome. 
+  When anxiety becomes excessive and/or prolonged, extending beyond the triggering event, it can be classified as an anxiety disorder. 
+  This disorder is characterized by a severe and disproportionate fear that lasts for at least 6 months, significantly impacting the individual's daily life and functioning."
+
+  utter_informsymptoms:
+  - text: "Do you want to know the associated symptoms?"
+
+  utter_anxietysymptoms:
+  - text: "Important symptoms of anxiety include excessive worry or fear, physical symptoms like rapid heartbeat and muscle tension, and sleep disturbances. 
+  Other signs include irrational thoughts, avoidance behaviors, difficulty concentrating, changes in appetite, irritability, social withdrawal, and physical discomfort.
+  Shall I keep going?"
+
+  utter_checkin:
+  - text: I'll keep that in mind. How are you feeling today?
+
   utter_happy:
     - condition:
         - type: slot
           name: name
           value: true
-      text: "Great, carry on {name}!"
+      text: "Great, I'm glad you feel that way! Carry on {name}!"
+    - text: "Great, I'm glad you feel that way! Carry on!"
 
-    - text: "Great, carry on!"
+  utter_badmood_anxiety:
+  - text: "I'm so sorry to hear that! It's normal to feel like that sometimes... Let's work on that! Can you tell me what happened? (YES/NO)"
+
+  utter_tell_more:
+  - text: "Great! Sometimes we only have to speak up what's inside our mind! Go for it" 
+
+  utter_understand:
+  - text: "Sure! I completely understand your side!"
+
+  utter_suggestions_anxiety:
+  - text: "Let's start then by trying to calm down and keep a cool head to deal with the situation.
+  Take a deep breath and try grounding techniques like focusing on your senses or using relaxation exercises. 
+  It may also help to engage in activities you enjoy or find calming, such as listening to music or going for a walk.
+  Does this make sense for you?"
+
+  utter_understand_situation:
+  - condition:
+        - type: slot
+          name: feeling
+          value: true
+    text: "Thank you for sharing that! It's completely normal to feel {feeling} going through that!"
+  - text: "Thank you for sharing that! It's completely normal to feel going through that!"
+
+
+
+
+
+
+
+
   utter_askunhappy:
-  - text: Can you tell me what happened?
   - text: Why are you unhappy?
   utter_cheerup:
   - text: Do you need cheering up?
   utter_funnyimage:
   - text: Here's something to make you happy!
     image: i.imgur.com/nGF1K8f.jpg
-  utter_knowmore:
-  - text: "Would you like to know more about any of these mental ilnesses?"
-    buttons:
-    - title: "Bipolar Disorder"
-      payload: "/disease_bipolar"
-    - title: "Anxiety"
-      payload: "/disease_anxiety"
+
+
   utter_disease_bipolar:
     - text: "Bipolar disorder is a mental health condition characterized by extreme mood swings. It involves episodes of high energy and euphoria (mania) as well as episodes of low mood and sadness (depression). People with bipolar disorder may experience changes in sleep, energy levels, and behavior. Treatment usually involves medication and therapy to help manage symptoms and stabilize mood."
   utter_bipolar_symptoms:

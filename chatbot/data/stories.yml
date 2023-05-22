@@ -1,6 +1,7 @@
 version: "3.1"
 
 stories:
+  # conversa inicial para obtenção de dados
   - story: initial conversation
     steps:
       - intent: greet
@@ -28,21 +29,82 @@ stories:
   - story: anxiety adapted conversation
     steps:
       - checkpoint: checkpoint_askdisease
+      - intent: disease_anxiety
+      - action: utter_knowmore
+      - checkpoint: knowmore
+  - story: more about disease
+    steps:
+      - checkpoint: knowmore
+      - intent: affirm
+      - action: utter_moreaboutanxiety
+      - action: utter_informsymptoms
+      - checkpoint: ask_symptoms
+  - story: yes symptoms
+    steps:
+      - checkpoint: ask_symptoms
+      - intent: affirm
+      - action: utter_anxietysymptoms
+      - intent: affirm
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood
+  - story: no symptoms
+    steps:
+      - checkpoint: ask_symptoms
+      - intent: deny
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood
+  - story: good mood
+    steps:
+      - checkpoint: checkpoint_askmood
+      - intent: mood_great
+      - action: utter_happy
+  - story: bad mood
+    steps:
+      - checkpoint: checkpoint_askmood
+      - intent: bad_mood_anxiety
+      - action: utter_badmood_anxiety
+      - checkpoint: tell_more
+  - story: tell more
+    steps:
+      - checkpoint: tell_more
+      - intent: affirm
+      - action: utter_tell_more
+      ########### ver como introduzir intent "aleatório" ###########
+      - intent:
+      - action: utter_understand_situation
+      - action: utter_suggestions_anxiety
+  - story: no tell more
+    steps:
+      - checkpoint: tell_more
+      - intent: deny
+      - action: utter_understand
+      - action: utter_suggestions_anxiety
+
 
   # conversa adaptada à doença de bipolaridade
   - story: bipolar disorder adapted conversation
     steps:
       - checkpoint: checkpoint_askdisease
+      - intent: disease_bipolar
+      - action: utter_checkin
 
   # conversa adaptada à doença de depressão
   - story: depression adapted conversation
     steps:
       - checkpoint: checkpoint_askdisease
+      - intent: disease_depression
+      - action: utter_checkin
   
   # conversa adaptada a nenhuma das doenças diagnosticadas
   - story: no diagnosed disease
     steps:
       - checkpoint: checkpoint_askdisease
+      - intent: disease_none
+      - action: utter_checkin
+
+
+
+
 
 
 
@@ -83,31 +145,3 @@ stories:
       - action: utter_bipolar_diagnosis
       - intent: info_treatment
       - action: utter_bipolar_treatment
-
-
-  # - story: happy path
-  #   steps:
-  #     - intent: greet
-  #     - action: utter_greet
-  #     - intent: mood_great
-  #     - action: utter_happy
-
-  # - story: sad path 1
-  #   steps:
-  #     - intent: greet
-  #     - action: utter_greet
-  #     - intent: mood_unhappy
-  #     - action: utter_cheer_up
-  #     - action: utter_did_that_help
-  #     - intent: affirm
-  #     - action: utter_happy
-
-  # - story: sad path 2
-  #   steps:
-  #     - intent: greet
-  #     - action: utter_greet
-  #     - intent: mood_unhappy
-  #     - action: utter_cheer_up
-  #     - action: utter_did_that_help
-  #     - intent: deny
-  #     - action: utter_goodbye
