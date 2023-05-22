@@ -62,6 +62,10 @@ stories:
     steps:
       - checkpoint: checkpoint_askmood
       - intent: bad_mood_anxiety
+        entities:
+        - feeling: stressed
+      - slot_was_set:
+        - feeling: stressed
       - action: utter_badmood_anxiety
       - checkpoint: tell_more
   - story: tell more
@@ -70,7 +74,7 @@ stories:
       - intent: affirm
       - action: utter_tell_more
       ########### ver como introduzir intent "aleatório" ###########
-      - intent:
+      - intent: affirm
       - action: utter_understand_situation
       - action: utter_suggestions_anxiety
   - story: no tell more
@@ -145,3 +149,43 @@ stories:
       - action: utter_bipolar_diagnosis
       - intent: info_treatment
       - action: utter_bipolar_treatment
+
+  - story: interactive_story_1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_askname
+    - intent: say_name
+      entities:
+      - name: mariana
+    - slot_was_set:
+      - name: mariana
+    - action: utter_askage
+    - intent: say_age
+      entities:
+      - age: '21'
+    - slot_was_set:
+      - age: '21'
+    - action: utter_askmoreinfo
+    - intent: affirm
+    - action: utter_askconditions
+    - intent: disease_anxiety
+    - action: utter_knowmore
+    - intent: affirm
+    - action: utter_moreaboutanxiety
+    - action: utter_informsymptoms
+    - intent: affirm
+    - action: utter_anxietysymptoms
+    - intent: affirm
+    - action: utter_checkin
+    - intent: bad_mood_anxiety
+      entities:
+      - feeling: stressed
+    - slot_was_set:
+      - feeling: stressed
+    - action: utter_badmood_anxiety
+    - intent: affirm
+    - action: utter_tell_more
+    - intent: affirm
+    - action: utter_understand_situation
+    - action: utter_suggestions_anxiety

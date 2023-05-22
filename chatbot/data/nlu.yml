@@ -15,21 +15,19 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: say_name
   examples: |
     - My name is [Mariana](name).
     - I'm [Luísa](name).
     - [José](name)
-    - My name is [Mariana](name).
-
+    - [mariana](name)
 - intent: say_age
   examples: |
     - [21](age)
     - My age is [22](age).
     - I'm [23](age) years old.
     - I'm [21](age) years old.
-
+    - [21](age)
 - intent: affirm
   examples: |
     - yes
@@ -38,7 +36,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -48,7 +45,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -65,7 +61,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -82,7 +77,6 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bad_mood_anxiety
   examples: |
     - I feel [stressed](feeling)
@@ -93,8 +87,7 @@ nlu:
     - I'm very [worried](feeling)
     - I'm [worried](feeling)
     - [worried](feeling)
-
-
+    - I feel [stressed](feeling)
 - intent: inform
   examples: |
     - fine
@@ -111,13 +104,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
-
-
-
-
-
-
 - intent: reason_unhappy
   examples: |
     - i've been having a bad day
@@ -140,7 +126,7 @@ nlu:
     - how is it diagnosed?
     - can you tell me about the diagnosis?
     - diagnosis
-- intent: info_treatment 
+- intent: info_treatment
   examples: |
     - how's the treatment?
     - how is it treated?
