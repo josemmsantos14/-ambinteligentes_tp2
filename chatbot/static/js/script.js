@@ -1,14 +1,12 @@
-
 /* module for importing other js files */
 function include(file) {
-  const script = document.createElement('script');
+  const script = document.createElement("script");
   script.src = file;
-  script.type = 'text/javascript';
+  script.type = "text/javascript";
   script.defer = true;
 
-  document.getElementsByTagName('head').item(0).appendChild(script);
+  document.getElementsByTagName("head").item(0).appendChild(script);
 }
-
 
 // Bot pop-up intro
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,11 +20,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* import components */
-include('./static/js/components/index.js');
+include("./static/js/components/index.js");
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   // initialization
   $(document).ready(() => {
+    //............................................................................................
+    let urls = [
+      "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTgyODk3ZTk2MzBhOWZiNGViMjM1NTVkZWU0ZTcyNThlYWE3ZDI4YiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/Yat5wnwisEV2iXbt4x/giphy.gif",
+      "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDcyZDJlYTdhNzdiMDVmYzE1MjJkZGUyMGVjZDIyZDdkMDVhYzM4YyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/V0UVbB1tZCL3ov0Iwx/giphy.gif",
+      "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjZiMjdkYzdmYWU5MzA1NzFkZWU4NmI2N2JjZGU3YjMyNTZmODY3NCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/rIdDOeGiIBmzZXsCef/giphy.gif",
+      "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzY3NDQ1Mjg5YzQ5MjUzYzcwN2ZkMTNjZjY5YmRkNmFlOTU5ODdmMSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/hxZ5FdXCk2bxT7wKDb/giphy.gif",
+    ];
+    let bgcolors = ["#ffe6e6", "#fd9889", "#ffddfe", "#5efbe6"];
+    let cout = 1;
+    $(".container").css("background-image", 'url("' + urls[0] + '")');
+    $("body").css("background-color", bgcolors[0]);
+    setInterval(function () {
+      $(".container").css("background-image", 'url("' + urls[cout] + '")');
+      $("body").css("background-color", bgcolors[cout]);
+      cout == urls.length - 1 ? (cout = 0) : cout++;
+    }, 5000);
+    //............................................................................................
+
     // Bot pop-up intro
     $("div").removeClass("tap-target-origin");
 
@@ -60,6 +76,11 @@ window.addEventListener('load', () => {
 
   // close function to close the widget.
   $("#close").click(() => {
+    $(".profile_div").toggle();
+    $(".widget").toggle();
+    scrollToBottomOfResults();
+  });
+  $("#close-bot-btn").click(() => {
     $(".profile_div").toggle();
     $(".widget").toggle();
     scrollToBottomOfResults();

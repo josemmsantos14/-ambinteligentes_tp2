@@ -1,17 +1,38 @@
 body {
   font-family: "Open Sans", sans-serif;
-  background: url("../img/body.png") no-repeat center center fixed;
-  background-size: cover;
+  background-color: white;
 }
 
+.navbar {
+  height: 4rem;
+  background: #0f8dd0;
+  padding: 0 15rem;
+  z-index: 1;
+  /* position: fixed; */
+  /* box-shadow: none; */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container {
+  height: calc(100vh - 4.2rem);
+  /* height: 100vh; */
+  background: no-repeat bottom fixed;
+  background-image: url("../img/body.png");
+  background-size: 45rem;
+  z-index: -1;
+}
 /* ============= css related to chats =============== */
 
 .widget {
   display: none;
-  width: 350px;
-  right: 15px;
-  height: 500px;
-  bottom: 5%;
+  width: 50rem;
+  height: 43rem;
+  right: 25rem;
+  bottom: 1.5rem;
   position: fixed;
   background: #fff;
   border-radius: 10px 10px 10px 10px;
@@ -19,18 +40,53 @@ body {
 }
 
 .chat_header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   height: 60px;
-  background: #060dcfc7;
+  background: #0f8dd0;
   border-radius: 10px 10px 0px 0px;
   padding: 5px;
   font-size: 20px;
 }
 
+.chat_header span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  right: 0.5rem;
+}
+
+.chat_header .close-chat-btn a {
+  cursor: pointer;
+  color: white;
+}
+
+.chat_header span a,
+.chat_header span i {
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+.chat_header span a:hover,
+.chat_header span i:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+.dropdown-trigger {
+  margin-left: 6rem;
+}
+
 .chat_header_title {
   color: white;
   float: left;
-  margin-top: 3%;
-  margin-left: 35%;
+  width: 20rem;
+  /* margin-top: 3%;
+  margin-left: 35%; */
+  font-size: 1.5rem;
 }
 
 .chats {
@@ -58,8 +114,8 @@ div.chats::-webkit-scrollbar {
 
 .botAvatar {
   border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
   float: left;
   margin-left: 5px;
   /* border: 2px solid  #060DCF ; */
@@ -76,7 +132,7 @@ div.chats::-webkit-scrollbar {
   border-radius: 1.5em;
   max-width: 60%;
   min-width: 25%;
-  font-size: 13px;
+  font-size: 1rem;
   word-wrap: break-word;
   border-radius: 5px 20px 20px 20px;
 }
@@ -122,10 +178,10 @@ textarea-webkit-scrollbar {
   padding: 10px;
   float: right;
   margin-right: 0.5em;
-  background: #060dcfc7;
+  background: #0f8dd0;
   color: white;
   margin-bottom: 0.15em;
-  font-size: 13px;
+  font-size: 1rem;
   max-width: 65%;
   min-width: 15%;
   border-radius: 20px 5px 20px 20px;
@@ -146,8 +202,8 @@ blockquote {
   animation: animateElement linear 0.3s;
   animation-iteration-count: 1;
   border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
   float: right;
   margin-right: 5px;
   /* border: 2px solid  #060DCF ; */
@@ -185,7 +241,7 @@ blockquote {
   padding: 5px;
   font-size: 20px;
   cursor: pointer;
-  color: #060dcfc7;
+  color: #0f8dd0;
 }
 
 .imgProfile {
@@ -199,8 +255,8 @@ blockquote {
   position: fixed;
   padding: 5px;
   width: 10%;
-  bottom: 0;
-  right: 0;
+  bottom: 2rem;
+  right: 2rem;
   cursor: pointer;
 }
 
@@ -215,14 +271,14 @@ blockquote {
 .dropdown-trigger {
   cursor: pointer;
   color: white;
-  margin-right: 5px;
   float: right;
-  margin-top: 3%;
+  /* margin-right: 5px; */
+  /* margin-top: 3%; */
 }
 
 .dropdown-content li > a,
 .dropdown-content li > span {
-  color: #060dcfc7;
+  color: #0f8dd0;
 }
 
 @keyframes animateElement {
@@ -827,8 +883,8 @@ video:focus {
 /* Bot pop-up intro */
 
 .tap-target {
-  color: #fff;
-  background: #060dcfc7;
+  color: #ffffff;
+  background: #0288cf;
 }
 
 .pdf_attachment {
