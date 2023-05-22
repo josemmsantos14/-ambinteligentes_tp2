@@ -1,21 +1,5 @@
 version: "3.1"
 nlu:
-- intent: say_name
-  examples: |
-    - My name is [Mariana](name).
-    - I'm [Luísa](name).
-    - [José](name)
-    - My name is [Mariana](name).
-- intent: say_age
-  examples: |
-    - [21](age)
-    - My age is [22](age).
-    - I'm [23](age) years old.
-    - I'm [21](age) years old.
-- intent: inform
-  examples: |
-    - fine
-    - well
 - intent: greet
   examples: |
     - hey
@@ -31,6 +15,27 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+
+- intent: say_name
+  examples: |
+    - My name is [Mariana](name).
+    - I'm [Luísa](name).
+    - [José](name)
+    - My name is [Mariana](name).
+
+- intent: say_age
+  examples: |
+    - [21](age)
+    - My age is [22](age).
+    - I'm [23](age) years old.
+    - I'm [21](age) years old.
+
+
+
+- intent: inform
+  examples: |
+    - fine
+    - well
 - intent: goodbye
   examples: |
     - cu

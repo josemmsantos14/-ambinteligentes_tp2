@@ -1,7 +1,7 @@
 version: "3.1"
 
 stories:
-  - story: normal conversation
+  - story: initial conversation
     steps:
       - intent: greet
       - action: utter_greet
@@ -17,6 +17,36 @@ stories:
         - age: '21'
       - slot_was_set:
         - age: '21'
+      # pergunta se pode saber mais do utilizador
+      - action: utter_askmoreinfo
+      - intent: affirm
+      # pergunta acerca de doenças psicológicas
+      - action: utter_askconditions
+      - checkpoint: checkpoint_askdisease
+
+  # conversa adaptada à doença de ansiedade
+  - story: anxiety adapted conversation
+    steps:
+      - checkpoint: checkpoint_askdisease
+
+  # conversa adaptada à doença de bipolaridade
+  - story: bipolar disorder adapted conversation
+    steps:
+      - checkpoint: checkpoint_askdisease
+
+  # conversa adaptada à doença de depressão
+  - story: depression adapted conversation
+    steps:
+      - checkpoint: checkpoint_askdisease
+  
+  # conversa adaptada a nenhuma das doenças diagnosticadas
+  - story: no diagnosed disease
+    steps:
+      - checkpoint: checkpoint_askdisease
+
+
+
+
       - action: utter_askmood
       - checkpoint: checkpoint_introduction
 

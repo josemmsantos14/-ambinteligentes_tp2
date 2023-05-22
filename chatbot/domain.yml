@@ -34,16 +34,41 @@ entities:
 - name
 - age
 responses:
+  
   utter_greet:
   - text: Hey!
   - text: Hello!
+  
   utter_askmood:
   - text: How are you?
   - text: How is your day going?
+  
   utter_askname:
   - text: Whats your name?
+  
   utter_askage:
-  - text: Nice! What about your age?
+    - condition:
+        - type: slot
+          name: name
+          value: true
+      text: Nice, {name}! What about your age?
+    - text: Nice! What about your age?
+  
+  utter_askmoreinfo:
+  - text: Can I know a bit more about you?
+
+  utter_askconditions:
+  - text: I want to support you in the best way that I can! That's why I need more information. Are you diagnosed with any of these diseases?
+    buttons:
+    - title: Anxiety
+      payload: "/disease_anxiety"
+    - title: Bipolar disorder
+      payload: "/disease_bipolar"
+    - title: Depression
+      payload: "/disease_depression"
+    - title: None of these
+      payload: "/disease_none"
+
   utter_happy:
     - condition:
         - type: slot
