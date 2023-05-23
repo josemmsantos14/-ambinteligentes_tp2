@@ -31,8 +31,17 @@ window.addEventListener("load", () => {
       "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDcyZDJlYTdhNzdiMDVmYzE1MjJkZGUyMGVjZDIyZDdkMDVhYzM4YyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/V0UVbB1tZCL3ov0Iwx/giphy.gif",
       "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjZiMjdkYzdmYWU5MzA1NzFkZWU4NmI2N2JjZGU3YjMyNTZmODY3NCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/rIdDOeGiIBmzZXsCef/giphy.gif",
       "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzY3NDQ1Mjg5YzQ5MjUzYzcwN2ZkMTNjZjY5YmRkNmFlOTU5ODdmMSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/hxZ5FdXCk2bxT7wKDb/giphy.gif",
+      "https://media3.giphy.com/media/YhW0qsOoz8vb37vxFO/giphy.gif?cid=ecf05e47hfsdz6l9jk2dwakn3xbfnhzc8r7y6mv5gwq10znd&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmQ1MTFiMTJmODUwNTJlNTgxMTE1MTZiNDllZjE5ZDFiMmNlMzZkOCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/IH6KuN09Etq0FgPxK1/giphy.gif",
     ];
-    let bgcolors = ["#ffe6e6", "#fd9889", "#ffddfe", "#5efbe6"];
+    let bgcolors = [
+      "#ffe6e6",
+      "#fd9889",
+      "#ffddfe",
+      "#5efbe6",
+      "#ffbd3d",
+      "#5ad1bd",
+    ];
     let cout = 1;
     $(".container").css("background-image", 'url("' + urls[0] + '")');
     $("body").css("background-color", bgcolors[0]);
@@ -40,7 +49,7 @@ window.addEventListener("load", () => {
       $(".container").css("background-image", 'url("' + urls[cout] + '")');
       $("body").css("background-color", bgcolors[cout]);
       cout == urls.length - 1 ? (cout = 0) : cout++;
-    }, 5000);
+    }, 7000);
     //............................................................................................
 
     // Bot pop-up intro
