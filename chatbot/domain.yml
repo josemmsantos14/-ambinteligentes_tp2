@@ -3,6 +3,7 @@ intents:
 - affirm
 - bad_mood_anxiety
 - bot_challenge
+- dealing_with_illness
 - deny
 - disease_anxiety
 - disease_bipolar
@@ -39,10 +40,17 @@ slots:
     mappings:
     - type: from_entity
       entity: feeling
+  illness:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: illness
 entities:
 - age
-- feeling
 - name
+- feeling
+- illness
 responses:
   utter_greet:
   - text: Hey!
@@ -104,6 +112,14 @@ responses:
       value: true
     text: Thank you for sharing that! It's completely normal to feel {feeling} going through that!
   - text: Thank you for sharing that! It's completely normal to feel going through that!
+  utter_until_next_time:
+  - text: Okay! I hope I could help you somehow to feel better, {name}! Until next time, xoxo Tcheery :)
+  utter_checkperiod:
+  - text: And how have you been feeling lately?
+  utter_help_with_situation:
+  - text: Okay, I see you and I'm here to help you! I'll give you more information about that disease, so you'll be more informed!
+  utter_recommend_profissional_help:
+  - text: If you relate to any of the symptoms I showed you, it's very important that you look for professional help to make a proper diagnoses and make your life better and easier! :) Meanwhile can I help you with anything else right now?
   utter_askunhappy:
   - text: Why are you unhappy?
   utter_cheerup:
@@ -127,19 +143,24 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
+- utter_checkperiod
+- utter_greet
+- action_differentiate_illness
+- utter_askname
+- utter_askconditions
+- utter_recommend_profissional_help
+- utter_askage
+- utter_askmoreinfo
+- utter_until_next_time
 - utter_tell_more
 - utter_knowmore
 - utter_moreaboutanxiety
-- utter_greet
-- utter_askmoreinfo
-- utter_askconditions
 - utter_informsymptoms
 - utter_badmood_anxiety
 - utter_checkin
-- utter_askage
 - utter_anxietysymptoms
 - utter_suggestions_anxiety
 - utter_understand_situation
-- utter_askname
 - utter_askmood
 - action_show_image
+- action_suggest_by_illness
