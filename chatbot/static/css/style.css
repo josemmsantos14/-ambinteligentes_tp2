@@ -155,7 +155,7 @@ body {
 /* ============= css related to chats =============== */
 
 .widget {
-  /* display: none; */
+  display: none;
   width: 60rem;
   height: 50rem;
   right: 33rem;
