@@ -321,38 +321,38 @@ stories:
   #   - intent: affirm
   #   - action: utter_until_next_time
 
-  - story: interactive_story_5
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: mariana
-    - slot_was_set:
-      - name: mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '21'
-    - slot_was_set:
-      - age: '21'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_anxiety
-    - action: utter_knowmore
-    - intent: deny
-    - action: utter_checkin
-    - intent: bad_mood_anxiety
-      entities:
-      - feeling: stressed
-    - slot_was_set:
-      - feeling: stressed
-    - action: utter_badmood_anxiety
-    - intent: deny
-    - action: utter_understand
-    - action: utter_gif
-    - action: utter_suggestions_anxiety
-    - intent: affirm
-    - action: utter_until_next_time
+  # - story: interactive_story_5
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_anxiety
+  #   - action: utter_knowmore
+  #   - intent: deny
+  #   - action: utter_checkin
+  #   - intent: bad_mood_anxiety
+  #     entities:
+  #     - feeling: stressed
+  #   - slot_was_set:
+  #     - feeling: stressed
+  #   - action: utter_badmood_anxiety
+  #   - intent: deny
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_anxiety
+  #   - intent: affirm
+  #   - action: utter_until_next_time
