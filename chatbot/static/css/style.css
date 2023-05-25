@@ -38,10 +38,13 @@ body {
 }
 
 .container {
+  overflow: hidden;
+  display: block;
+
   height: calc(100vh - 4.2rem);
   /* height: 100vh; */
   background: no-repeat center fixed;
-  background-image: url("../img/body.png");
+  /* background-image: url("../img/body.png"); */
   background-size: 30rem;
   z-index: -1;
 }
@@ -160,7 +163,7 @@ body {
   height: 50rem;
   right: 33rem;
   bottom: 4rem;
-  position: fixed;
+  position: absolute;
   background: #fff;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 5px 0 #00000096;
@@ -224,7 +227,7 @@ body {
 
 .chats {
   /* display: none; */
-  height: 385px;
+  height: 80%;
   padding: 2px;
   border-radius: 1px;
   overflow-y: scroll;
@@ -354,7 +357,7 @@ blockquote {
 .keypad {
   /* display: none;  */
   background: white;
-  height: 50px;
+  height: 3.5rem;
   position: absolute;
   bottom: 0px;
   width: 100%;

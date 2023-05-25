@@ -39,6 +39,27 @@ class ActionHelloWorld(Action):
 #         dispatcher.utter_message(image="https://i.imgur.com/nGF1K8f.jpg")
 
 #         return []
+
+
+# - image: "https://media.istockphoto.com/id/1211384629/vector/psychologist-online-psychotherapy-practice-psychological-help-psychiatrist-consulting.jpg?s=170667a&w=0&k=20&c=K9rzaq43_jzfUIddP23AyLDHQwzBeYcoJXSfIjIZ7Hw="
+#             title: "Image Description"
+#             subtitle: "Click the image to visit the website"
+#             buttons:
+#               - title: "Visit Website"
+#                 payload: "https://www.publico.pt/2021/10/10/p3/noticia/eis-dez-servicos-apoio-psicologico-acessiveis-pedir-ajuda-nao-pesadelo-1980389"
+#     - text: "Meanwhile, can I help you with anything else right now?"
+
+
+class ActionShowImageSupport(Action):
+    def name(self) -> Text:
+        return "action_show_image_support"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message("<a href='https://www.publico.pt/2021/10/10/p3/noticia/eis-dez-servicos-apoio-psicologico-acessiveis-pedir-ajuda-nao-pesadelo-1980389'><img style='width: 15rem;' src='https://media.istockphoto.com/id/1211384629/vector/psychologist-online-psychotherapy-practice-psychological-help-psychiatrist-consulting.jpg?s=170667a&w=0&k=20&c=K9rzaq43_jzfUIddP23AyLDHQwzBeYcoJXSfIjIZ7Hw='></a>")
+        # dispatcher.utter_message("Click <a href='https://www.publico.pt/2021/10/10/p3/noticia/eis-dez-servicos-apoio-psicologico-acessiveis-pedir-ajuda-nao-pesadelo-1980389'>here</a> to visit accessible support institutions")
+        dispatcher.utter_message("Meanwhile, can I help you with anything else right now?")
+        return []
+    
     
 class ActionDifferentiateConversation(Action):
     def name(self) -> Text:
@@ -54,8 +75,11 @@ class ActionDifferentiateConversation(Action):
         if "anxiety" in user_input:
             # Handle conversation differently for this condition
             illness = "disease_anxiety"
-            dispatcher.utter_message("Anxiety is a normal reaction to danger or everyday stress. It is a feeling of fear or concern about a potential negative outcome. When anxiety becomes excessive and/or prolonged, extending beyond the triggering event, it can be classified as an anxiety disorder. This disorder is characterized by a severe and disproportionate fear that lasts for at least 6 months, significantly impacting the individual's daily life and functioning.")
-            dispatcher.utter_message("Important symptoms of anxiety include excessive worry or fear, physical symptoms like rapid heartbeat and muscle tension, and sleep disturbances. Other signs include irrational thoughts, avoidance behaviors, difficulty concentrating, changes in appetite, irritability, social withdrawal, and physical discomfort.")
+            dispatcher.utter_message("Okay, I see you and I'm here to help you! I'll give you more information about that disease, so you'll be more informed!")
+            dispatcher.utter_message("To help you understand if you are actually dealing with anxiety, here is a video that shows '7 Signs It Might Be Anxiety'. If you want, check it out")
+            # <a href='https://www.youtube.com/watch?v=hm0_jrXqxR4'>here</a>
+            dispatcher.utter_message('<iframe width="560" height="315" src="https://www.youtube.com/embed/hm0_jrXqxR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+            dispatcher.utter_message("Otherwise, you can check this link with additional information about Anxiety: <a href='https://www.sns24.gov.pt/tema/saude-mental/ansiedade/#o-que-e-a-ansiedade'>click here</a>")
         elif "bipolar" in user_input:
             # Handle conversation differently for other conditions
             illness = "disease_bipolar"

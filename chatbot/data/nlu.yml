@@ -43,6 +43,7 @@ nlu:
     - [clara](name)
     - [luísa](name)
     - [josé](name)
+    - [mariana](name)
 - intent: say_age
   examples: |
     - [21](age)
@@ -51,6 +52,7 @@ nlu:
     - I'm [21](age) years old.
     - [23](age)
     - [66](age)
+    - [21](age)
 - intent: affirm
   examples: |
     - yes
@@ -68,6 +70,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - No
 - intent: mood_great
   examples: |
     - perfect
@@ -110,6 +113,24 @@ nlu:
     - I'm very [worried](feeling)
     - I'm [worried](feeling)
     - [worried](feeling)
+    - [stressed](feeling)
+- intent: tell_problem
+  examples: |
+    - I'm having trouble meeting my deadlines due to the constant interruptions in the office.
+    - My coworker keeps taking credit for my ideas, and it's becoming a real problem.
+    - I'm struggling to communicate effectively with my team, which is affecting our productivity.
+    - I'm finding it hard to concentrate in class because of the noise and distractions.
+    - I missed an important assignment deadline because I had too many other obligations.
+    - I'm having difficulty understanding the concepts in my math class, and it's affecting my grades.
+    - My partner and I have been arguing a lot lately, and it's causing a strain in our relationship.
+    - I feel like my friends are excluding me from social activities, and it's making me feel left out.
+    - I'm having a hard time expressing my feelings to my family, and it's creating misunderstandings.
+    - I struggle with managing my time effectively, and it's causing stress and missed opportunities.
+    - I have a hard time saying 'no' to people, and it's leading to a constant feeling of being overwhelmed.
+    - I often experience anxiety before public speaking, and it's holding me back from pursuing certain opportunities.
+    - I've been having trouble falling asleep at night, and it's affecting my energy levels during the day.
+    - I find it difficult to maintain a healthy diet due to my busy schedule.
+    - I'm feeling overwhelmed with stress and don't know how to effectively manage it.
 - intent: dealing_with_illness
   examples: |
     - I think I might be dealing with [anxiety](illness)
@@ -156,7 +177,6 @@ nlu:
     - I'm tired of everything. Maybe I have [depression](illness)
     - [anxiety](illness)
     - i think i might be dealing with [anxiety](illness)
-    - [anxiety](illness)
 - intent: inform
   examples: |
     - fine

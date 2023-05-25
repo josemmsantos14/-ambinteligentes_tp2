@@ -1,166 +1,170 @@
-version: "3.1"
+version: '3.1'
 intents:
-  - affirm
-  - bad_mood_anxiety
-  - bot_challenge
-  - dealing_with_illness
-  - deny
-  - disease_anxiety
-  - disease_bipolar
-  - disease_depression
-  - disease_none
-  - goodbye
-  - greet
-  - info_diagnosis
-  - info_diseases
-  - info_symptoms
-  - info_treatment
-  - inform
-  - mood_great
-  - mood_unhappy
-  - reason_unhappy
-  - say_age
-  - say_name
+- affirm
+- bad_mood_anxiety
+- bot_challenge
+- dealing_with_illness
+- deny
+- disease_anxiety
+- disease_bipolar
+- disease_depression
+- disease_none
+- goodbye
+- greet
+- info_diagnosis
+- info_diseases
+- info_symptoms
+- info_treatment
+- inform
+- mood_great
+- mood_unhappy
+- reason_unhappy
+- say_age
+- say_name
+- tell_problem
 slots:
   name:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: name
+    - type: from_entity
+      entity: name
   age:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: age
+    - type: from_entity
+      entity: age
   feeling:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: feeling
+    - type: from_entity
+      entity: feeling
   illness:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: illness
+    - type: from_entity
+      entity: illness
 entities:
 - name
-- illness
 - age
 - feeling
+- illness
 responses:
   utter_greet:
-    - text: Hey!
-    - text: Hello!
+  - text: Hey!
+  - text: Hello!
   utter_askmood:
-    - text: How are you?
-    - text: How is your day going?
+  - text: How are you?
+  - text: How is your day going?
   utter_askname:
-    - text: Whats your name?
+  - text: Whats your name?
   utter_askage:
-    - condition:
-        - type: slot
-          name: name
-          value: true
-      text: Nice, {name}! What about your age?
-    - text: Nice! What about your age?
+  - condition:
+    - type: slot
+      name: name
+      value: true
+    text: Nice, {name}! What about your age?
+  - text: Nice! What about your age?
   utter_askmoreinfo:
-    - text: Can I know a bit more about you?
+  - text: Can I know a bit more about you?
   utter_askconditions:
-    - text: I want to support you in the best way that I can! That's why I need more information. Are you diagnosed with any of these diseases?
-      buttons:
-        - title: Anxiety
-          payload: /disease_anxiety
-        - title: Bipolar disorder
-          payload: /disease_bipolar
-        - title: Depression
-          payload: /disease_depression
-        - title: None of these
-          payload: /disease_none
+  - text: I want to support you in the best way that I can! That's why I need more information. Are you diagnosed with any of these diseases?
+    buttons:
+    - title: Anxiety
+      payload: /disease_anxiety
+    - title: Bipolar disorder
+      payload: /disease_bipolar
+    - title: Depression
+      payload: /disease_depression
+    - title: None of these
+      payload: /disease_none
   utter_knowmore:
-    - text: Would you like to know more about that condition?
+  - text: Would you like to know more about that condition?
   utter_moreaboutanxiety:
-    - text: Anxiety is a normal reaction to danger or everyday stress. It is a feeling of fear or concern about a potential negative outcome. When anxiety becomes excessive and/or prolonged, extending beyond the triggering event, it can be classified as an anxiety disorder. This disorder is characterized by a severe and disproportionate fear that lasts for at least 6 months, significantly impacting the individual's daily life and functioning.
+  - text: Anxiety is a normal reaction to danger or everyday stress. It is a feeling of fear or concern about a potential negative outcome. When anxiety becomes excessive and/or prolonged, extending beyond the triggering event, it can be classified as an anxiety disorder. This disorder is characterized by a severe and disproportionate fear that lasts for at least 6 months, significantly impacting the individual's daily life and functioning.
   utter_informsymptoms:
-    - text: Do you want to know the associated symptoms?
+  - text: Do you want to know the associated symptoms?
   utter_anxietysymptoms:
-    - text: Important symptoms of anxiety include excessive worry or fear, physical symptoms like rapid heartbeat and muscle tension, and sleep disturbances. Other signs include irrational thoughts, avoidance behaviors, difficulty concentrating, changes in appetite, irritability, social withdrawal, and physical discomfort. Shall I keep going?
+  - text: Important symptoms of anxiety include excessive worry or fear, physical symptoms like rapid heartbeat and muscle tension, and sleep disturbances. Other signs include irrational thoughts, avoidance behaviors, difficulty concentrating, changes in appetite, irritability, social withdrawal, and physical discomfort. Shall I keep going?
   utter_checkin:
-    - text: I'll keep that in mind. How are you feeling today?
+  - text: I'll keep that in mind. How are you feeling today?
   utter_happy:
-    - condition:
-        - type: slot
-          name: name
-          value: true
-      text: Great, I'm glad you feel that way! Carry on {name}!
-    - text: Great, I'm glad you feel that way! Carry on!
+  - condition:
+    - type: slot
+      name: name
+      value: true
+    text: Great, I'm glad you feel that way! Carry on {name}!
+  - text: Great, I'm glad you feel that way! Carry on!
   utter_badmood_anxiety:
-    - text: I'm so sorry to hear that! It's normal to feel like that sometimes... Let's work on that! Can you tell me what happened? (YES/NO)
+  - text: I'm so sorry to hear that! It's normal to feel like that sometimes... Let's work on that! Can you tell me what happened? (YES/NO)
   utter_tell_more:
-    - text: Great! Sometimes we only have to speak up what's inside our mind! Go for it
+  - text: Great! Sometimes we only have to speak up what's inside our mind! Go for it
   utter_understand:
-    - text: Sure! I completely understand your side!
+  - text: Sure! I completely understand your side!
+  utter_gif:
+  - text: "<img src='https://media.tenor.com/PRS1bOHt2qwAAAAC/big-hero6-baymax.gif' style='width: 15rem;'>"
   utter_suggestions_anxiety:
-    - text: Let's start then by trying to calm down and keep a cool head to deal with the situation. Take a deep breath and try grounding techniques like focusing on your senses or using relaxation exercises. It may also help to engage in activities you enjoy or find calming, such as listening to music or going for a walk. Does this make sense for you?
+  - text: Let's start then by trying to calm down and keep a cool head to deal with the situation. Take a deep breath and try grounding techniques like focusing on your senses or using relaxation exercises. It may also help to engage in activities you enjoy or find calming, such as listening to music or going for a walk. Does this make sense for you?
   utter_understand_situation:
-    - condition:
-        - type: slot
-          name: feeling
-          value: true
-      text: Thank you for sharing that! It's completely normal to feel {feeling} going through that!
-    - text: Thank you for sharing that! It's completely normal to feel going through that!
+  - condition:
+    - type: slot
+      name: feeling
+      value: true
+    text: Thank you for sharing that! It's completely normal to feel {feeling} going through that!
+  - text: Thank you for sharing that! It's completely normal to feel that way going through that!
   utter_until_next_time:
-    - text: Okay! I hope I could help you somehow to feel better, {name}! Until next time, xoxo Tcheery :)
+  - text: Okay! I hope I could help you somehow to feel better, {name}! Until next time, xoxo Tcheery :)
   utter_checkperiod:
-    - text: And how have you been feeling lately?
-  utter_help_with_situation:
-    - text: Okay, I see you and I'm here to help you! I'll give you more information about that disease, so you'll be more informed!
+  - text: And how have you been feeling lately?
   utter_recommend_profissional_help:
-    - text: If you relate to any of the symptoms I showed you, it's very important that you look for professional help to make a proper diagnoses and make your life better and easier! :) Meanwhile can I help you with anything else right now?
+  - text: If you relate to any of the symptoms I showed you, it's very important that you look for professional help to make a proper diagnoses and make your life better and easier! :) If you need some tips on who to contact, click the image to visit a site with a collection of accessible support institutions.
   utter_askunhappy:
-    - text: Why are you unhappy?
+  - text: Why are you unhappy?
   utter_cheerup:
-    - text: Do you need cheering up?
+  - text: Do you need cheering up?
   utter_funnyimage:
-    - text: Here's something to make you happy!
-      image: i.imgur.com/nGF1K8f.jpg
+  - text: Here's something to make you happy!
+    image: i.imgur.com/nGF1K8f.jpg
   utter_disease_bipolar:
-    - text: Bipolar disorder is a mental health condition characterized by extreme mood swings. It involves episodes of high energy and euphoria (mania) as well as episodes of low mood and sadness (depression). People with bipolar disorder may experience changes in sleep, energy levels, and behavior. Treatment usually involves medication and therapy to help manage symptoms and stabilize mood.
+  - text: Bipolar disorder is a mental health condition characterized by extreme mood swings. It involves episodes of high energy and euphoria (mania) as well as episodes of low mood and sadness (depression). People with bipolar disorder may experience changes in sleep, energy levels, and behavior. Treatment usually involves medication and therapy to help manage symptoms and stabilize mood.
   utter_bipolar_symptoms:
-    - text: "Bipolar disorder involves shifts in mood, energy, and activity levels. Manic episodes: Elevated mood, increased energy, racing thoughts, decreased need for sleep, impulsive behavior. Depressive episodes: Persistent sadness, loss of interest, changes in appetite and sleep, difficulty concentrating. Mixed episodes: Symptoms of both mania and depression occurring at the same time, leading to agitation and intense mood swings."
+  - text: 'Bipolar disorder involves shifts in mood, energy, and activity levels. Manic episodes: Elevated mood, increased energy, racing thoughts, decreased need for sleep, impulsive behavior. Depressive episodes: Persistent sadness, loss of interest, changes in appetite and sleep, difficulty concentrating. Mixed episodes: Symptoms of both mania and depression occurring at the same time, leading to agitation and intense mood swings.'
   utter_bipolar_diagnosis:
-    - text: Bipolar disorder diagnosis involves a thorough evaluation by a mental health professional. They assess symptoms, medical history, and family history. Diagnostic criteria from the DSM-5 are used to determine if symptoms align with bipolar disorder. Mood patterns, medical evaluations, psychosocial factors, and collateral information are considered. An accurate diagnosis is crucial for effective treatment. Seeking professional help is recommended for those suspecting bipolar disorder.
+  - text: Bipolar disorder diagnosis involves a thorough evaluation by a mental health professional. They assess symptoms, medical history, and family history. Diagnostic criteria from the DSM-5 are used to determine if symptoms align with bipolar disorder. Mood patterns, medical evaluations, psychosocial factors, and collateral information are considered. An accurate diagnosis is crucial for effective treatment. Seeking professional help is recommended for those suspecting bipolar disorder.
   utter_bipolar_treatment:
-    - text: Bipolar disorder treatment involves medication, therapy (such as CBT), and lifestyle adjustments. Medication helps stabilize mood, therapy aids in understanding and managing symptoms, and lifestyle changes include maintaining a routine, reducing stress, and seeking support. Close collaboration with healthcare professionals is essential for developing a personalized treatment plan.
+  - text: Bipolar disorder treatment involves medication, therapy (such as CBT), and lifestyle adjustments. Medication helps stabilize mood, therapy aids in understanding and managing symptoms, and lifestyle changes include maintaining a routine, reducing stress, and seeking support. Close collaboration with healthcare professionals is essential for developing a personalized treatment plan.
   utter_goodbye:
-    - text: Bye
+  - text: Bye
   utter_iamabot:
-    - text: I am a bot, powered by Rasa.
+  - text: I am a bot, powered by Rasa.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
-- utter_askconditions
-- action_suggest_by_illness
-- utter_askage
-- utter_recommend_profissional_help
-- utter_askname
 - utter_greet
-- action_differentiate_illness
+- utter_askname
 - utter_askmoreinfo
+- utter_checkin
+- utter_knowmore
+- utter_askconditions
+- utter_badmood_anxiety
+- utter_gif
 - utter_until_next_time
+- utter_suggestions_anxiety
+- utter_understand
+- utter_askage
+- action_suggest_by_illness
+- utter_recommend_profissional_help
+- action_differentiate_illness
 - utter_checkperiod
 - utter_tell_more
-- utter_knowmore
 - utter_moreaboutanxiety
 - utter_informsymptoms
-- utter_badmood_anxiety
-- utter_checkin
 - utter_anxietysymptoms
-- utter_suggestions_anxiety
 - utter_understand_situation
 - utter_askmood
 - action_show_image
+- action_show_image_support
