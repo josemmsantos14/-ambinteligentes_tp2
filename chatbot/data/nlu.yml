@@ -21,7 +21,27 @@ nlu:
     - I'm [Luísa](name).
     - [José](name)
     - [mariana](name)
-    - [mariana](name)
+    - [joao] (name)
+    - [maria] (name)
+    - [pedro] (name)
+    - [ana] (name)
+    - [carlos] (name)
+    - [isabel] (name)
+    - [antonio] (name)
+    - [sofia] (name)
+    - [francisco] (name)
+    - [beatriz] (name)
+    - [miguel] (name)
+    - [matilde] (name)
+    - [tiago] (name)
+    - [laura] (name)
+    - [alexandre] (name)
+    - [ines] (name)
+    - [luis] (name)
+    - [rita] (name)
+    - [andre] (name)
+    - [clara] (name)
+      
 - intent: say_age
   examples: |
     - [21](age)
