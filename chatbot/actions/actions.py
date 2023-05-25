@@ -27,18 +27,18 @@ class ActionHelloWorld(Action):
 
         return []
     
-class ActionShowImage(Action):
+# class ActionShowImage(Action):
 
-    def name(self) -> Text:
-        return "action_show_image"
+#     def name(self) -> Text:
+#         return "action_show_image"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(image="https://i.imgur.com/nGF1K8f.jpg")
+#         dispatcher.utter_message(image="https://i.imgur.com/nGF1K8f.jpg")
 
-        return []
+#         return []
     
 class ActionDifferentiateConversation(Action):
     def name(self) -> Text:

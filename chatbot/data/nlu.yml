@@ -21,34 +21,36 @@ nlu:
     - I'm [Luísa](name).
     - [José](name)
     - [mariana](name)
-    - [joao] (name)
-    - [maria] (name)
-    - [pedro] (name)
-    - [ana] (name)
-    - [carlos] (name)
-    - [isabel] (name)
-    - [antonio] (name)
-    - [sofia] (name)
-    - [francisco] (name)
-    - [beatriz] (name)
-    - [miguel] (name)
-    - [matilde] (name)
-    - [tiago] (name)
-    - [laura] (name)
-    - [alexandre] (name)
-    - [ines] (name)
-    - [luis] (name)
-    - [rita] (name)
-    - [andre] (name)
-    - [clara] (name)
-      
+    - [joao](name)
+    - [maria](name)
+    - [pedro](name)
+    - [ana](name)
+    - [carlos](name)
+    - [isabel](name)
+    - [antonio](name)
+    - [sofia](name)
+    - [francisco](name)
+    - [beatriz](name)
+    - [miguel](name)
+    - [matilde](name)
+    - [tiago](name)
+    - [laura](name)
+    - [alexandre](name)
+    - [ines](name)
+    - [luis](name)
+    - [rita](name)
+    - [andre](name)
+    - [clara](name)
+    - [luísa](name)
+    - [josé](name)
 - intent: say_age
   examples: |
     - [21](age)
     - My age is [22](age).
     - I'm [23](age) years old.
     - I'm [21](age) years old.
-    - [21](age)
+    - [23](age)
+    - [66](age)
 - intent: affirm
   examples: |
     - yes
@@ -152,6 +154,8 @@ nlu:
     - I'm tired of everything. I think I might be dealing with [depression](illness)
     - I'm tired of everything. I think I might have [depression](illness)
     - I'm tired of everything. Maybe I have [depression](illness)
+    - [anxiety](illness)
+    - i think i might be dealing with [anxiety](illness)
     - [anxiety](illness)
 - intent: inform
   examples: |

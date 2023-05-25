@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-age",
+      "2": "I-age",
+      "3": "L-age",
+      "4": "U-age",
+      "5": "B-feeling",
+      "6": "I-feeling",
+      "7": "L-feeling",
+      "8": "U-feeling",
+      "9": "B-illness",
+      "10": "I-illness",
+      "11": "L-illness",
+      "12": "U-illness",
+      "13": "B-name",
+      "14": "I-name",
+      "15": "L-name",
+      "16": "U-name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-age": 1,
+      "I-age": 2,
+      "L-age": 3,
+      "U-age": 4,
+      "B-feeling": 5,
+      "I-feeling": 6,
+      "L-feeling": 7,
+      "U-feeling": 8,
+      "B-illness": 9,
+      "I-illness": 10,
+      "L-illness": 11,
+      "U-illness": 12,
+      "B-name": 13,
+      "I-name": 14,
+      "L-name": 15,
+      "U-name": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
