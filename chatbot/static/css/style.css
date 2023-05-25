@@ -40,19 +40,126 @@ body {
 .container {
   height: calc(100vh - 4.2rem);
   /* height: 100vh; */
-  background: no-repeat bottom fixed;
+  background: no-repeat center fixed;
   background-image: url("../img/body.png");
-  background-size: 45rem;
+  background-size: 30rem;
   z-index: -1;
+}
+/* Width------------------------------------------------------------------- */
+@media only screen and (max-width: 400px) and (min-width: 100px) {
+  .widget {
+    display: none;
+  }
+  .navbar ul {
+    display: none;
+  }
+  .chat_header {
+    background-color: red;
+  }
+  .profile_div {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  .imgProfile {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  .tap-target-wrapper {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) and (min-width: 400px) {
+  .widget {
+    width: 20rem !important;
+    right: 3rem !important;
+  }
+  .navbar {
+    padding: 0 3rem !important;
+  }
+  .profile_div {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  .imgProfile {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 500px) {
+  .navbar {
+    padding: 0 3rem !important;
+  }
+  .profile_div {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  .imgProfile {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  .widget {
+    width: 30rem !important;
+    right: 6rem !important;
+  }
+}
+@media only screen and (max-width: 700px) and (min-width: 600px) {
+  .widget {
+    width: 35rem !important;
+    right: 7rem !important;
+  }
+}
+@media only screen and (max-width: 900px) and (min-width: 700px) {
+  .widget {
+    width: 40rem !important;
+    right: 8rem !important;
+  }
+}
+@media only screen and (max-width: 1150px) and (min-width: 900px) {
+  .widget {
+    width: 50rem !important;
+    right: 10rem !important;
+  }
+}
+@media only screen and (max-width: 1450px) and (min-width: 1160px) {
+  .widget {
+    width: 55rem !important;
+    right: 18rem !important;
+  }
+}
+/* Height------------------------------------------------------------------- */
+@media only screen and (max-height: 900px) and (min-height: 800px) {
+  .widget {
+    height: 45rem !important;
+  }
+}
+@media only screen and (max-height: 800px) and (min-height: 750px) {
+  .widget {
+    height: 40rem !important;
+  }
+}
+@media only screen and (max-height: 750px) and (min-height: 600px) {
+  .widget {
+    height: 30rem !important;
+  }
+}
+@media only screen and (max-height: 600px) and (min-height: 450px) {
+  .widget {
+    height: 20rem !important;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .widget {
+    display: none;
+  }
 }
 /* ============= css related to chats =============== */
 
 .widget {
-  display: none;
-  width: 50rem;
-  height: 43rem;
-  right: 25rem;
-  bottom: 1.5rem;
+  /* display: none; */
+  width: 60rem;
+  height: 50rem;
+  right: 33rem;
+  bottom: 4rem;
   position: fixed;
   background: #fff;
   border-radius: 10px 10px 10px 10px;
@@ -272,8 +379,9 @@ blockquote {
 
 .imgProfile {
   box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 #00000096;
-  border-radius: 50px;
-  width: 60%;
+  border-radius: 100%;
+  width: 7rem;
+  height: 7rem;
   transition: all 0.5s ease-out;
 }
 
@@ -285,14 +393,12 @@ blockquote {
 .profile_div {
   /* display: none; */
   position: fixed;
-  padding: 5px;
-  width: 10%;
+  padding: 1rem;
+  width: 8rem;
+  height: 8rem;
   bottom: 3.5rem;
-  right: 2.5rem;
+  right: 3.5rem;
   cursor: pointer;
-}
-
-.profile_div {
   display: flex;
   align-items: center;
   justify-content: center;
