@@ -56,8 +56,8 @@ entities:
 - illness
 responses:
   utter_greet:
-  - text: Hey!
-  - text: Hello!
+  - text: Hey! I'm Tcheery! :)
+  - text: Hello! I'm Tcheery! :)
   utter_askmood:
   - text: How are you?
   - text: How is your day going?
@@ -68,8 +68,8 @@ responses:
     - type: slot
       name: name
       value: true
-    text: Nice, {name}! What about your age?
-  - text: Nice! What about your age?
+    text: Nice meet you {name}! What about your age?
+  - text: Nice to meet you!! What about your age?
   utter_askmoreinfo:
   - text: Can I know a bit more about you?
   utter_askconditions:
