@@ -86,7 +86,11 @@ class ActionDifferentiateConversation(Action):
             dispatcher.utter_message("Bipolar disease.")
         elif "depression" in user_input:
             illness = "disease_depression"
-            dispatcher.utter_message("Depression.")
+            dispatcher.utter_message("Okay, I see you and I'm here to help you! I'll give you more information about that disease, so you'll be more informed!")
+            dispatcher.utter_message("To help you understand if you are actually dealing with depression, here is a video that shows '8 Types Of Depression You Should Know'. If you want, check it out")
+            dispatcher.utter_message('<iframe width="560" height="315" src="https://www.youtube.com/embed/NDOeZD2F7jU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+            dispatcher.utter_message("Otherwise, you can check this link with additional information about Depression: <a href='https://www.sns24.gov.pt/tema/saude-mental/depressao/'>click here</a>")
+        
 
 
         return [SlotSet("illness", illness)]
@@ -107,6 +111,6 @@ class ActionSuggestionsByIllness(Action):
         elif illness == "disease_bipolar":
             dispatcher.utter_message("SUGESTÕES DOENÇA BIPOLAR")
         elif illness == "disease_depression":
-            dispatcher.utter_message("SUGESTÕES DEPRESSÃO")
+            dispatcher.utter_message("Why not try coping strategies or relaxation techniques? Deep breathing exercises or mindfulness exercises can help. You could also try doing a physical activity you enjoy, such as walking, swimming or yoga. Don't forget to take time to look after yourself and do things that bring you joy and relaxation. For example, taking a warm bath, reading a book, practising mindfulness or meditation, or engaging in a hobby. Does this help?")
 
         return []
