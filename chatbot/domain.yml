@@ -2,6 +2,7 @@ version: '3.1'
 intents:
 - affirm
 - bad_mood_anxiety
+- bad_mood_depression
 - bot_challenge
 - dealing_with_illness
 - deny
@@ -136,6 +137,16 @@ responses:
   - text: Bipolar disorder diagnosis involves a thorough evaluation by a mental health professional. They assess symptoms, medical history, and family history. Diagnostic criteria from the DSM-5 are used to determine if symptoms align with bipolar disorder. Mood patterns, medical evaluations, psychosocial factors, and collateral information are considered. An accurate diagnosis is crucial for effective treatment. Seeking professional help is recommended for those suspecting bipolar disorder.
   utter_bipolar_treatment:
   - text: Bipolar disorder treatment involves medication, therapy (such as CBT), and lifestyle adjustments. Medication helps stabilize mood, therapy aids in understanding and managing symptoms, and lifestyle changes include maintaining a routine, reducing stress, and seeking support. Close collaboration with healthcare professionals is essential for developing a personalized treatment plan.
+  utter_moreaboutdepression:
+  - text: Depression is a persistent mental disorder that negatively affects the way a person feels, thinks and acts. It causes feelings of sadness and/or loss of interest and pleasure in usual playful activities and significantly decreases the person's functional capacity, both professionally and socially. Depression thus induces intense suffering and can ultimately lead to suicide. Depression is thus different from mood fluctuations reactive to everyday events and challenges. These fluctuations usually occur over a short period of time and do not affect the person's functional capacity.
+  utter_depressionsymptoms:
+  - text: Symptoms of depression may include persistent sadness, loss of interest or pleasure in usual play activities, changes in appetite and sleep disturbances such as insomnia or increased need for sleep, loss of energy or initiative, or persistent feeling of tiredness. Other symptoms include feelings of guilt or helplessness, difficulty concentrating and making decisions, thoughts about death or suicidal ideation. Shall I keep going?
+  utter_badmood_depression:
+  - text: I'm sorry to hear that you're feeling down. Remember, you're not alone in this. I'm here to support you. Is there a specific aspect of your life that's been bothering you lately? (YES/NO)
+  utter_understand_console:
+  - text: Don't be too hard on yourself. Depression can make things feel overwhelming, but you're doing the best you can.
+  utter_suggestions_depression:
+  - text: Why not try coping strategies or relaxation techniques? Deep breathing exercises or mindfulness exercises can help. You could also try doing a physical activity you enjoy, such as walking, swimming or yoga. Don't forget to take time to look after yourself and do things that bring you joy and relaxation. For example, taking a warm bath, reading a book, practising mindfulness or meditation, or engaging in a hobby. Does this help?
   utter_goodbye:
   - text: Bye
   utter_iamabot:
@@ -144,27 +155,32 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
-- utter_greet
-- utter_askname
-- utter_askmoreinfo
-- utter_checkin
-- utter_knowmore
-- utter_askconditions
-- utter_badmood_anxiety
 - utter_gif
+- utter_knowmore
 - utter_until_next_time
-- utter_suggestions_anxiety
+- utter_askname
+- utter_badmood_depression
+- utter_tell_more
+- utter_informsymptoms
+- utter_moreaboutdepression
+- utter_askconditions
+- utter_greet
+- utter_askmoreinfo
 - utter_understand
+- utter_understand_console
+- utter_depressionsymptoms
 - utter_askage
+- utter_checkin
+- utter_suggestions_depression
+- utter_understand_situation
+- utter_badmood_anxiety
+- utter_suggestions_anxiety
 - action_suggest_by_illness
 - utter_recommend_profissional_help
 - action_differentiate_illness
 - utter_checkperiod
-- utter_tell_more
 - utter_moreaboutanxiety
-- utter_informsymptoms
 - utter_anxietysymptoms
-- utter_understand_situation
 - utter_askmood
 - action_show_image
 - action_show_image_support
