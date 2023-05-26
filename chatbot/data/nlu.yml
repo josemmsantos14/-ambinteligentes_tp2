@@ -15,6 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - Hey
 - intent: say_name
   examples: |
     - My name is [Mariana](name).
@@ -43,7 +44,8 @@ nlu:
     - [clara](name)
     - [luísa](name)
     - [josé](name)
-    - [mariana](name)
+    - [Mariana](name)
+    - [Mariana](name)
 - intent: say_age
   examples: |
     - [21](age)
@@ -52,7 +54,7 @@ nlu:
     - I'm [21](age) years old.
     - [23](age)
     - [66](age)
-    - [21](age)
+    - [24](age)
 - intent: affirm
   examples: |
     - yes
@@ -103,6 +105,7 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - [sad](feeling)
 - intent: bad_mood_anxiety
   examples: |
     - I feel [stressed](feeling)
@@ -113,7 +116,20 @@ nlu:
     - I'm very [worried](feeling)
     - I'm [worried](feeling)
     - [worried](feeling)
-    - [stressed](feeling)
+- intent: bad_mood_depression
+  examples: |
+    - I feel [suicidal](feeling)
+    - I'm [suicidal](feeling)
+    - [suicidal](feeling)
+    - I'm [hopelessness](feeling)
+    - I feel [hopelessness](feeling)
+    - I feel [worthlessness](feeling)
+    - [worthlessness](feeling)
+    - I feel [without energy](feeling)
+    - [without energy](feeling)
+    - I'm very [sad](feeling)
+    - [sad](feeling)
+    - [sad](feeling)
 - intent: tell_problem
   examples: |
     - I'm having trouble meeting my deadlines due to the constant interruptions in the office.
