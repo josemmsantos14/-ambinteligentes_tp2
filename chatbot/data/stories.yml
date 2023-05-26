@@ -413,145 +413,145 @@ stories:
       - checkpoint: checkpoint_askdisease
 
   # conversa adaptada à doença de ansiedade
-  # - story: anxiety adapted conversation
-  #   steps:
-  #     - checkpoint: checkpoint_askdisease
-  #     - intent: disease_anxiety
-  #     - action: utter_knowmore
-  #     - checkpoint: knowmore
-  # - story: more about disease
-  #   steps:
-  #     - checkpoint: knowmore
-  #     - intent: affirm
-  #     - action: utter_moreaboutanxiety
-  #     - action: utter_informsymptoms
-  #     - checkpoint: ask_symptoms
-  # - story: yes symptoms
-  #   steps:
-  #     - checkpoint: ask_symptoms
-  #     - intent: affirm
-  #     - action: utter_anxietysymptoms
-  #     - intent: affirm
-  #     - action: utter_checkin
-  #     - checkpoint: checkpoint_askmood
-  # - story: no symptoms
-  #   steps:
-  #     - checkpoint: ask_symptoms
-  #     - intent: deny
-  #     - action: utter_checkin
-  #     - checkpoint: checkpoint_askmood
-  # - story: no more about disease
-  #   steps:
-  #     - checkpoint: knowmore
-  #     - intent: deny
-  #     - action: utter_checkin
-  #     - checkpoint: checkpoint_askmood
-  # - story: good mood
-  #   steps:
-  #     - checkpoint: checkpoint_askmood
-  #     - intent: mood_great
-  #     - action: utter_happy
-  # - story: bad mood anxiety
-  #   steps:
-  #     - checkpoint: checkpoint_askmood
-  #     - intent: bad_mood_anxiety
-  #       entities:
-  #       - feeling: stressed
-  #     - slot_was_set:
-  #       - feeling: stressed
-  #     - action: utter_badmood_anxiety
-  #     - checkpoint: tell_more
-  # - story: tell more
-  #   steps:
-  #     - checkpoint: tell_more
-  #     - intent: affirm
-  #     - action: utter_tell_more
-  #     - intent: tell_problem
-  #     - action: utter_understand_situation
-  #     - action: utter_gif
-  #     - action: utter_suggestions_anxiety
-  #     - intent: affirm
-  #     - action: utter_until_next_time
-  # - story: no tell more
-  #   steps:
-  #     - checkpoint: tell_more
-  #     - intent: deny
-  #     - action: utter_understand
-  #     - action: utter_gif
-  #     - action: utter_suggestions_anxiety
-  #     - intent: affirm
-  #     - action: utter_until_next_time
+  - story: anxiety adapted conversation
+    steps:
+      - checkpoint: checkpoint_askdisease
+      - intent: disease_anxiety
+      - action: utter_knowmore
+      - checkpoint: knowmore
+  - story: more about disease
+    steps:
+      - checkpoint: knowmore
+      - intent: affirm
+      - action: utter_moreaboutanxiety
+      - action: utter_informsymptoms
+      - checkpoint: ask_symptoms
+  - story: yes symptoms
+    steps:
+      - checkpoint: ask_symptoms
+      - intent: affirm
+      - action: utter_anxietysymptoms
+      - intent: affirm
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood
+  - story: no symptoms
+    steps:
+      - checkpoint: ask_symptoms
+      - intent: deny
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood
+  - story: no more about disease
+    steps:
+      - checkpoint: knowmore
+      - intent: deny
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood
+  - story: good mood
+    steps:
+      - checkpoint: checkpoint_askmood
+      - intent: mood_great
+      - action: utter_happy
+  - story: bad mood anxiety
+    steps:
+      - checkpoint: checkpoint_askmood
+      - intent: bad_mood_anxiety
+        entities:
+        - feeling: stressed
+      - slot_was_set:
+        - feeling: stressed
+      - action: utter_badmood_anxiety
+      - checkpoint: tell_more
+  - story: tell more
+    steps:
+      - checkpoint: tell_more
+      - intent: affirm
+      - action: utter_tell_more
+      - intent: tell_problem
+      - action: utter_understand_situation
+      - action: utter_gif
+      - action: utter_suggestions_anxiety
+      - intent: affirm
+      - action: utter_until_next_time
+  - story: no tell more
+    steps:
+      - checkpoint: tell_more
+      - intent: deny
+      - action: utter_understand
+      - action: utter_gif
+      - action: utter_suggestions_anxiety
+      - intent: affirm
+      - action: utter_until_next_time
 
 
   # conversa adaptada à doença de bipolaridade
-  # - story: bipolar disorder adapted conversation
-  #   steps:
-  #     - checkpoint: checkpoint_askdisease
-  #     - intent: disease_bipolar
-  #     - action: utter_knowmore
-  #     - checkpoint: knowmore  
-  # - story: more about disease
-  #   steps:
-  #     - checkpoint: knowmore
-  #     - intent: affirm
-  #     - action: utter_moreaboutbipolar
-  #     - action: utter_informsymptoms
-  #     - checkpoint: ask_symptoms
-  # - story: yes symptoms
-  #   steps:
-  #     - checkpoint: ask_symptoms
-  #     - intent: affirm
-  #     - action: utter_bipolarsymptoms
-  #     - intent: affirm
-  #     - action: utter_checkin
-  #     - checkpoint: checkpoint_askmood
-  # - story: no symptoms
-  #   steps:
-  #     - checkpoint: ask_symptoms
-  #     - intent: deny
-  #     - action: utter_checkin
-  #     - checkpoint: checkpoint_askmood
-  # - story: no more about disease
-  #   steps:
-  #     - checkpoint: knowmore
-  #     - intent: deny
-  #     - action: utter_checkin
-  #     - checkpoint: checkpoint_askmood
-  # - story: good mood
-  #   steps:
-  #     - checkpoint: checkpoint_askmood
-  #     - intent: mood_great
-  #     - action: utter_happy
-  # - story: bad mood bipolar
-  #   steps:
-  #     - checkpoint: checkpoint_askmood
-  #     - intent: bad_mood_bipolar
-  #       entities:
-  #       - feeling: stressed
-  #     - slot_was_set:
-  #       - feeling: stressed
-  #     - action: utter_badmood_bipolar
-  #     - checkpoint: tell_more
-  # - story: tell more
-  #   steps:
-  #     - checkpoint: tell_more
-  #     - intent: affirm
-  #     - action: utter_tell_more
-  #     - intent: tell_problem
-  #     - action: utter_understand_situation
-  #     - action: utter_gif
-  #     - action: action_suggest_by_illness
-  #     - intent: affirm
-  #     - action: utter_until_next_time
-  # - story: no tell more
-  #   steps:
-  #     - checkpoint: tell_more
-  #     - intent: deny
-  #     - action: utter_understand
-  #     - action: utter_gif
-  #     - action: action_suggest_by_illness
-  #     - intent: affirm
-  #     - action: utter_until_next_time
+  - story: bipolar disorder adapted conversation
+    steps:
+      - checkpoint: checkpoint_askdisease
+      - intent: disease_bipolar
+      - action: utter_knowmore
+      - checkpoint: knowmore  
+  - story: more about disease
+    steps:
+      - checkpoint: knowmore
+      - intent: affirm
+      - action: utter_moreaboutbipolar
+      - action: utter_informsymptoms
+      - checkpoint: ask_symptoms
+  - story: yes symptoms
+    steps:
+      - checkpoint: ask_symptoms
+      - intent: affirm
+      - action: utter_bipolarsymptoms
+      - intent: affirm
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood
+  - story: no symptoms
+    steps:
+      - checkpoint: ask_symptoms
+      - intent: deny
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood
+  - story: no more about disease
+    steps:
+      - checkpoint: knowmore
+      - intent: deny
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood
+  - story: good mood
+    steps:
+      - checkpoint: checkpoint_askmood
+      - intent: mood_great
+      - action: utter_happy
+  - story: bad mood bipolar
+    steps:
+      - checkpoint: checkpoint_askmood
+      - intent: bad_mood_bipolar
+        entities:
+        - feeling: stressed
+      - slot_was_set:
+        - feeling: stressed
+      - action: utter_badmood_bipolar
+      - checkpoint: tell_more
+  - story: tell more
+    steps:
+      - checkpoint: tell_more
+      - intent: affirm
+      - action: utter_tell_more
+      - intent: tell_problem
+      - action: utter_understand_situation
+      - action: utter_gif
+      - action: action_suggest_by_illness
+      - intent: affirm
+      - action: utter_until_next_time
+  - story: no tell more
+    steps:
+      - checkpoint: tell_more
+      - intent: deny
+      - action: utter_understand
+      - action: utter_gif
+      - action: action_suggest_by_illness
+      - intent: affirm
+      - action: utter_until_next_time
 
   # conversa adaptada à doença de depressão
   - story: depression adapted conversation
