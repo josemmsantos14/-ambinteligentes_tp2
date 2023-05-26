@@ -1,0 +1,49 @@
+{
+  "name": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 27,
+    "confused_with": {}
+  },
+  "feeling": {
+    "precision": 0.9555555555555556,
+    "recall": 1.0,
+    "f1-score": 0.9772727272727273,
+    "support": 43,
+    "confused_with": {}
+  },
+  "illness": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 55,
+    "confused_with": {}
+  },
+  "age": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9850746268656716,
+    "recall": 1.0,
+    "f1-score": 0.9924812030075187,
+    "support": 132
+  },
+  "macro avg": {
+    "precision": 0.9888888888888889,
+    "recall": 1.0,
+    "f1-score": 0.9943181818181819,
+    "support": 132
+  },
+  "weighted avg": {
+    "precision": 0.9855218855218856,
+    "recall": 1.0,
+    "f1-score": 0.9925964187327825,
+    "support": 132
+  },
+  "accuracy": 0.9980750721847931
+}

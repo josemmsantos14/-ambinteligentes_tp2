@@ -1,0 +1,18 @@
+[
+  {
+    "text": "I'm overwhelmed.",
+    "intent": "bad_mood_bipolar",
+    "intent_prediction": {
+      "name": "bad_mood_anxiety",
+      "confidence": 0.8313577771186829
+    }
+  },
+  {
+    "text": "sad",
+    "intent": "bad_mood_depression",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.794776439666748
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "text": "sad",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "feeling",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.7912647128105164,
+        "value": "sad",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i'm feeling stressed",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "feeling",
+        "start": 12,
+        "end": 20,
+        "confidence_entity": 0.8295658230781555,
+        "value": "stressed",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

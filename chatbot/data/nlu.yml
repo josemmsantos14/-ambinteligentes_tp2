@@ -45,7 +45,6 @@ nlu:
     - [luísa](name)
     - [josé](name)
     - [Mariana](name)
-    - [Mariana](name)
 - intent: say_age
   examples: |
     - [21](age)
@@ -116,6 +115,23 @@ nlu:
     - I'm very [worried](feeling)
     - I'm [worried](feeling)
     - [worried](feeling)
+- intent: bad_mood_bipolar
+  examples: |
+    - I'm feeling [sad](feeling).
+    - I'm feeling [hopeless](feeling).
+    - My mood is really [low](feeling) today.
+    - I can't shake off this intense [irritability](feeling).
+    - I'm [overwhelmed](feeling).
+    - I'm feeling [guilty](feeling).
+    - I'm experiencing a deep sense of [emptiness](feeling)
+    - I'm feeling [worthless](feeling).
+    - I have [no motivation](feeling).
+    - I'm feeling [anxious](feeling)
+    - I'm feeling [restless](feeling).
+    - I'm having [trouble concentrating](feeling)
+    - I'm having [trouble making decisions](feeling).
+    - I've been having [trouble sleeping](feeling)
+    - I feel like [giving up](feeling).
 - intent: bad_mood_depression
   examples: |
     - I feel [suicidal](feeling)
@@ -128,7 +144,6 @@ nlu:
     - I feel [without energy](feeling)
     - [without energy](feeling)
     - I'm very [sad](feeling)
-    - [sad](feeling)
     - [sad](feeling)
 - intent: tell_problem
   examples: |
@@ -209,12 +224,12 @@ nlu:
     - see you around
     - bye bye
     - see you later
-- intent: reason_unhappy
-  examples: |
-    - i've been having a bad day
-    - i'm feeling stressed
-    - my grades are bad
-    - i have no friends
+# - intent: reason_unhappy
+#   examples: |
+#     - i've been having a bad day
+#     - i'm feeling stressed
+#     - my grades are bad
+#     - i have no friends
 - intent: info_diseases
   examples: |
     - i would like to know more about mental illness

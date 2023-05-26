@@ -2,6 +2,7 @@ version: '3.1'
 intents:
 - affirm
 - bad_mood_anxiety
+- bad_mood_bipolar
 - bad_mood_depression
 - bot_challenge
 - dealing_with_illness
@@ -50,8 +51,8 @@ slots:
       entity: illness
 entities:
 - name
-- age
 - feeling
+- age
 - illness
 responses:
   utter_greet:
@@ -129,14 +130,14 @@ responses:
   utter_funnyimage:
   - text: Here's something to make you happy!
     image: i.imgur.com/nGF1K8f.jpg
-  utter_disease_bipolar:
+  utter_moreaboutbipolar:
   - text: Bipolar disorder is a mental health condition characterized by extreme mood swings. It involves episodes of high energy and euphoria (mania) as well as episodes of low mood and sadness (depression). People with bipolar disorder may experience changes in sleep, energy levels, and behavior. Treatment usually involves medication and therapy to help manage symptoms and stabilize mood.
-  utter_bipolar_symptoms:
-  - text: 'Bipolar disorder involves shifts in mood, energy, and activity levels. Manic episodes: Elevated mood, increased energy, racing thoughts, decreased need for sleep, impulsive behavior. Depressive episodes: Persistent sadness, loss of interest, changes in appetite and sleep, difficulty concentrating. Mixed episodes: Symptoms of both mania and depression occurring at the same time, leading to agitation and intense mood swings.'
-  utter_bipolar_diagnosis:
-  - text: Bipolar disorder diagnosis involves a thorough evaluation by a mental health professional. They assess symptoms, medical history, and family history. Diagnostic criteria from the DSM-5 are used to determine if symptoms align with bipolar disorder. Mood patterns, medical evaluations, psychosocial factors, and collateral information are considered. An accurate diagnosis is crucial for effective treatment. Seeking professional help is recommended for those suspecting bipolar disorder.
-  utter_bipolar_treatment:
-  - text: Bipolar disorder treatment involves medication, therapy (such as CBT), and lifestyle adjustments. Medication helps stabilize mood, therapy aids in understanding and managing symptoms, and lifestyle changes include maintaining a routine, reducing stress, and seeking support. Close collaboration with healthcare professionals is essential for developing a personalized treatment plan.
+  utter_bipolarsymptoms:
+  - text: 'Bipolar disorder involves shifts in mood, energy, and activity levels. Manic episodes: Elevated mood, increased energy, racing thoughts, decreased need for sleep, impulsive behavior. Depressive episodes: Persistent sadness, loss of interest, changes in appetite and sleep, difficulty concentrating. Mixed episodes: Symptoms of both mania and depression occurring at the same time, leading to agitation and intense mood swings. Shall I keep going?'
+  utter_badmood_bipolar:
+  - text: I'm sorry to hear that you're feeling that way. It's completely normal to experience such emotions from time to time. If you're comfortable sharing, I'm here to listen and support you. Want to tell me what happened? (YES/NO)
+  utter_suggestions_bipolar:
+  - text: Let's start by focusing on managing your mood and maintaining stability. Take a moment to breathe deeply and practice grounding techniques. Engage in activities that bring you joy or promote relaxation, such as listening to soothing music or participating in gentle exercise. Remember to prioritize self-care and seek professional support to navigate the challenges of bipolar disorder effectively. Is this helpful for you?
   utter_moreaboutdepression:
   - text: Depression is a persistent mental disorder that negatively affects the way a person feels, thinks and acts. It causes feelings of sadness and/or loss of interest and pleasure in usual playful activities and significantly decreases the person's functional capacity, both professionally and socially. Depression thus induces intense suffering and can ultimately lead to suicide. Depression is thus different from mood fluctuations reactive to everyday events and challenges. These fluctuations usually occur over a short period of time and do not affect the person's functional capacity.
   utter_depressionsymptoms:
@@ -155,27 +156,30 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
-- utter_gif
-- utter_knowmore
+- action_suggest_by_illness
+- utter_badmood_bipolar
+- utter_bipolarsymptoms
 - utter_until_next_time
-- utter_askname
-- utter_badmood_depression
 - utter_tell_more
-- utter_informsymptoms
-- utter_moreaboutdepression
-- utter_askconditions
+- utter_askage
 - utter_greet
+- utter_moreaboutbipolar
+- utter_askname
+- utter_understand_situation
+- utter_askconditions
+- utter_gif
+- utter_checkin
 - utter_askmoreinfo
+- utter_knowmore
+- utter_informsymptoms
+- utter_badmood_depression
+- utter_moreaboutdepression
 - utter_understand
 - utter_understand_console
 - utter_depressionsymptoms
-- utter_askage
-- utter_checkin
 - utter_suggestions_depression
-- utter_understand_situation
 - utter_badmood_anxiety
 - utter_suggestions_anxiety
-- action_suggest_by_illness
 - utter_recommend_profissional_help
 - action_differentiate_illness
 - utter_checkperiod
