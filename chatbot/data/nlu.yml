@@ -104,7 +104,6 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-    - [sad](feeling)
 - intent: bad_mood_anxiety
   examples: |
     - I feel [stressed](feeling)
@@ -117,7 +116,6 @@ nlu:
     - [worried](feeling)
 - intent: bad_mood_bipolar
   examples: |
-    - I'm feeling [sad](feeling).
     - I'm feeling [hopeless](feeling).
     - My mood is really [low](feeling) today.
     - I can't shake off this intense [irritability](feeling).

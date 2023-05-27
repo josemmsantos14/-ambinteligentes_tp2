@@ -221,7 +221,7 @@ stories:
     - intent: affirm
     - action: utter_until_next_time
 
-  - story: bipolar first yes second no
+  - story: anxiety first yes second no
     steps:
     - intent: greet
     - action: utter_greet
@@ -275,9 +275,9 @@ stories:
     - action: utter_askage
     - intent: say_age
       entities:
-      - age: '24'
+      - age: '23'
     - slot_was_set:
-      - age: '24'
+      - age: '23'
     - action: utter_askmoreinfo
     - intent: affirm
     - action: utter_askconditions
@@ -290,20 +290,135 @@ stories:
     - action: utter_depressionsymptoms
     - intent: affirm
     - action: utter_checkin
-    - intent: mood_unhappy
-      entities:
-      - feeling: sad
-    - slot_was_set:
-      - feeling: sad
     - intent: bad_mood_depression
       entities:
-      - feeling: sad
+      - feeling: worthlessness
+    - slot_was_set:
+      - feeling: worthlessness
     - action: utter_badmood_depression
-    - intent: tell_problem
+    - intent: affirm
     - action: utter_tell_more
     - intent: tell_problem
-    - action: utter_understand_console
     - action: utter_understand
+    - action: utter_understand_console
+    - action: utter_gif
+    - action: utter_suggestions_depression
+    - intent: affirm
+    - action: utter_until_next_time
+
+  - story: depression a few no's
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_askname
+    - intent: say_name
+      entities:
+      - name: mariana
+    - slot_was_set:
+      - name: mariana
+    - action: utter_askage
+    - intent: say_age
+      entities:
+      - age: '23'
+    - slot_was_set:
+      - age: '23'
+    - action: utter_askmoreinfo
+    - intent: affirm
+    - action: utter_askconditions
+    - intent: disease_depression
+    - action: utter_knowmore
+    - intent: deny
+    - action: utter_checkin
+    - intent: bad_mood_depression
+      entities:
+      - feeling: worthlessness
+    - slot_was_set:
+      - feeling: worthlessness
+    - action: utter_badmood_depression
+    - intent: deny
+    - action: utter_understand
+    - action: utter_understand_console
+    - action: utter_gif
+    - action: utter_suggestions_depression
+    - intent: affirm
+    - action: utter_until_next_time
+
+  - story: depression first no second yes
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_askname
+    - intent: say_name
+      entities:
+      - name: Mariana
+    - slot_was_set:
+      - name: Mariana
+    - action: utter_askage
+    - intent: say_age
+      entities:
+      - age: '23'
+    - slot_was_set:
+      - age: '23'
+    - action: utter_askmoreinfo
+    - intent: affirm
+    - action: utter_askconditions
+    - intent: disease_depression
+    - action: utter_knowmore
+    - intent: deny
+    - action: utter_checkin
+    - intent: bad_mood_depression
+      entities:
+      - feeling: worthlessness
+    - slot_was_set:
+      - feeling: worthlessness
+    - action: utter_badmood_depression
+    - intent: affirm
+    - action: utter_tell_more
+    - intent: tell_problem
+    - action: utter_understand
+    - action: utter_understand_console
+    - action: utter_gif
+    - action: utter_suggestions_depression
+    - intent: affirm
+    - action: utter_until_next_time
+
+  - story: depression first yes second no
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_askname
+    - intent: say_name
+      entities:
+      - name: Mariana
+    - slot_was_set:
+      - name: Mariana
+    - action: utter_askage
+    - intent: say_age
+      entities:
+      - age: '23'
+    - slot_was_set:
+      - age: '23'
+    - action: utter_askmoreinfo
+    - intent: affirm
+    - action: utter_askconditions
+    - intent: disease_depression
+    - action: utter_knowmore
+    - intent: affirm
+    - action: utter_moreaboutdepression
+    - action: utter_informsymptoms
+    - intent: affirm
+    - action: utter_depressionsymptoms
+    - intent: affirm
+    - action: utter_checkin
+    - intent: bad_mood_depression
+      entities:
+      - feeling: worthlessness
+    - slot_was_set:
+      - feeling: worthlessness
+    - action: utter_badmood_depression
+    - intent: deny
+    - action: utter_understand
+    - action: utter_understand_console
     - action: utter_gif
     - action: utter_suggestions_depression
     - intent: affirm
@@ -655,70 +770,80 @@ stories:
       - action: utter_until_next_time
 
   # conversa adaptada à doença de depressão
-  - story: depression adapted conversation
-    steps:
-      - checkpoint: checkpoint_askdisease
-      - intent: disease_depression
-      - action: utter_knowmore
-      - checkpoint: knowmore 
-  - story: more about depression
-    steps:
-      - checkpoint: knowmore
-      - intent: affirm
-      - action: utter_moreaboutdepression
-      - action: utter_informsymptoms
-      - checkpoint: ask_symptoms
-  - story: yes depression symptoms
-    steps:
-      - checkpoint: ask_symptoms
-      - intent: affirm
-      - action: utter_depressionsymptoms
-      - intent: affirm
-      - action: utter_checkin
-      - checkpoint: checkpoint_askmood
-  - story: no depression symptoms
-    steps:
-      - checkpoint: ask_symptoms
-      - intent: deny
-      - action: utter_checkin
-      - checkpoint: checkpoint_askmood
-  - story: no more about depression
-    steps:
-      - checkpoint: knowmore
-      - intent: deny
-      - action: utter_checkin
-      - checkpoint: checkpoint_askmood
-  - story: bad mood depression
-    steps:
-      - checkpoint: checkpoint_askmood
-      - intent: bad_mood_depression
-        entities:
-        - feeling: sad
-      - slot_was_set:
-        - feeling: sad
-      - action: utter_badmood_depression
-      - checkpoint: tell_more_depression
-  - story: tell more depression
-    steps:
-      - checkpoint: tell_more_depression
-      - intent: affirm
-      - action: utter_tell_more
-      - intent: tell_problem
-      - action: utter_understand_situation
-      - action: utter_understand_console
-      - action: utter_gif
-      - action: utter_suggestions_depression
-      - intent: affirm
-      - action: utter_until_next_time
-  - story: no tell more depression
-    steps:
-      - checkpoint: tell_more_depression
-      - intent: deny
-      - action: utter_understand
-      - action: utter_gif
-      - action: utter_suggestions_depression
-      - intent: affirm
-      - action: utter_until_next_time
+  # - story: depression adapted conversation
+  #   steps:
+  #     - checkpoint: checkpoint_askdisease
+  #     - intent: disease_depression
+  #     - action: utter_knowmore
+  #     - checkpoint: knowmore 
+  #     - checkpoint: ask_symptoms 
+  #     - checkpoint: checkpoint_askmood
+  #     - checkpoint: tell_more
+
+  # - story: more about disease
+  #   steps:
+  #     - checkpoint: knowmore
+  #     - intent: affirm
+  #     - action: utter_moreaboutdepression
+  #     - action: utter_informsymptoms
+  #     - checkpoint: ask_symptoms
+  
+  # - story: no more about disease
+  #   steps:
+  #     - checkpoint: knowmore
+  #     - intent: deny
+  #     - action: utter_checkin
+  #     - checkpoint: checkpoint_askmood
+
+  # - story: yes symptoms
+  #   steps:
+  #     - checkpoint: ask_symptoms
+  #     - intent: affirm
+  #     - action: utter_depressionsymptoms
+  #     - intent: affirm
+  #     - action: utter_checkin
+  #     - checkpoint: checkpoint_askmood
+
+  # - story: no symptoms
+  #   steps:
+  #     - checkpoint: ask_symptoms
+  #     - intent: deny
+  #     - action: utter_checkin
+  #     - checkpoint: checkpoint_askmood
+  
+  # - story: bad mood depression
+  #   steps:
+  #     - checkpoint: checkpoint_askmood
+  #     - intent: bad_mood_depression
+  #       entities:
+  #       - feeling: worthlessness
+  #     - slot_was_set:
+  #       - feeling: worthlessness
+  #     - action: utter_badmood_depression
+  #     - checkpoint: tell_more
+
+  # - story: tell more 
+  #   steps:
+  #     - checkpoint: tell_more
+  #     - intent: affirm
+  #     - action: utter_tell_more
+  #     - intent: tell_problem
+  #     - action: utter_understand_situation
+  #     - action: utter_understand_console
+  #     - action: utter_gif
+  #     - action: utter_suggestions_depression
+  #     - intent: affirm
+  #     - action: utter_until_next_time
+
+  # - story: no tell more
+  #   steps:
+  #     - checkpoint: tell_more
+  #     - intent: deny
+  #     - action: utter_understand
+  #     - action: utter_gif
+  #     - action: utter_suggestions_depression
+  #     - intent: affirm
+  #     - action: utter_until_next_time
 
   # conversa adaptada a nenhuma das doenças diagnosticadas
   - story: no diagnosed disease
@@ -790,3 +915,7 @@ stories:
   #     - action: utter_bipolar_diagnosis
   #     - intent: info_treatment
   #     - action: utter_bipolar_treatment
+
+
+
+  

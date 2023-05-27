@@ -172,8 +172,8 @@ actions:
 - utter_askmoreinfo
 - utter_knowmore
 - utter_informsymptoms
-- utter_badmood_depression
 - utter_moreaboutdepression
+- utter_badmood_depression
 - utter_understand
 - utter_understand_console
 - utter_depressionsymptoms
