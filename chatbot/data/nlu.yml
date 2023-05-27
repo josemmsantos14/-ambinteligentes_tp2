@@ -141,8 +141,6 @@ nlu:
     - [worthlessness](feeling)
     - I feel [without energy](feeling)
     - [without energy](feeling)
-    - I'm very [sad](feeling)
-    - [sad](feeling)
 - intent: tell_problem
   examples: |
     - I'm having trouble meeting my deadlines due to the constant interruptions in the office.

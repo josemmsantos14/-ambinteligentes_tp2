@@ -1,587 +1,6 @@
 version: "3.1"
 
 stories:
-  - story: anxiety all yes
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: mariana
-    - slot_was_set:
-      - name: mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '21'
-    - slot_was_set:
-      - age: '21'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_anxiety
-    - action: utter_knowmore
-    - intent: affirm
-    - action: utter_moreaboutanxiety
-    - action: utter_informsymptoms
-    - intent: affirm
-    - action: utter_anxietysymptoms
-    - intent: affirm
-    - action: utter_checkin
-    - intent: bad_mood_anxiety
-      entities:
-      - feeling: stressed
-    - slot_was_set:
-      - feeling: stressed
-    - action: utter_badmood_anxiety
-    - intent: affirm
-    - action: utter_tell_more
-    - intent: tell_problem
-    - action: utter_understand_situation
-    - action: utter_suggestions_anxiety
-    - intent: affirm
-    - action: utter_until_next_time
-
-  # - story: no disease - maybe anxiety  
-  #   steps:
-  #   - intent: greet
-  #   - action: utter_greet
-  #   - action: utter_askname
-  #   - intent: say_name
-  #     entities:
-  #     - name: mariana
-  #   - slot_was_set:
-  #     - name: mariana
-  #   - action: utter_askage
-  #   - intent: say_age
-  #     entities:
-  #     - age: '21'
-  #   - slot_was_set:
-  #     - age: '21'
-  #   - action: utter_askmoreinfo
-  #   - intent: affirm
-  #   - action: utter_askconditions
-  #   - intent: disease_none
-  #   - action: utter_checkperiod
-  #   - intent: dealing_with_illness
-  #     entities:
-  #     - illness: anxiety
-  #   - action: action_differentiate_illness
-  #   - action: utter_recommend_profissional_help
-  #   - action: action_show_image_support
-  #   - intent: affirm
-  #   - action: action_suggest_by_illness
-  #   - intent: affirm
-  #   - action: utter_until_next_time
-
-  - story: no disease maybe anxiety  
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: luísa
-    - slot_was_set:
-      - name: luísa
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '23'
-    - slot_was_set:
-      - age: '23'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_none
-    - action: utter_checkperiod
-    - intent: dealing_with_illness
-      entities:
-      - illness: anxiety
-    - slot_was_set:
-      - illness: anxiety
-    - action: action_differentiate_illness
-    - slot_was_set:
-      - illness: disease_anxiety
-    - action: utter_recommend_profissional_help
-    - action: action_show_image_support
-    - intent: affirm
-    - action: action_suggest_by_illness
-    - intent: affirm
-    - action: utter_until_next_time
-
-  # - story: no disease - maybe anxiety
-  #   steps:
-  #   - intent: greet
-  #   - action: utter_greet
-  #   - action: utter_askname
-  #   - intent: say_name
-  #     entities:
-  #     - name: josé
-  #   - slot_was_set:
-  #     - name: josé
-  #   - action: utter_askage
-  #   - intent: say_age
-  #     entities:
-  #     - age: '66'
-  #   - slot_was_set:
-  #     - age: '66'
-  #   - action: utter_askmoreinfo
-  #   - intent: affirm
-  #   - action: utter_askconditions
-  #   - intent: disease_none
-  #   - action: utter_checkperiod
-  #   - intent: dealing_with_illness
-  #     entities:
-  #     - illness: anxiety
-  #   - slot_was_set:
-  #     - illness: anxiety
-  #   - action: action_differentiate_illness
-  #   - slot_was_set:
-  #     - illness: disease_anxiety
-  #   - action: utter_recommend_profissional_help
-  #   - action: action_show_image_support
-  #   - intent: affirm
-  #   - action: action_suggest_by_illness
-  #   - intent: affirm
-  #   - action: utter_until_next_time
-
-  - story: anxiety a few no's
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: mariana
-    - slot_was_set:
-      - name: mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '21'
-    - slot_was_set:
-      - age: '21'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_anxiety
-    - action: utter_knowmore
-    - intent: deny
-    - action: utter_checkin
-    - intent: bad_mood_anxiety
-      entities:
-      - feeling: stressed
-    - slot_was_set:
-      - feeling: stressed
-    - action: utter_badmood_anxiety
-    - intent: deny
-    - action: utter_understand
-    - action: utter_gif
-    - action: utter_suggestions_anxiety
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: anxiety first no second yes
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: mariana
-    - slot_was_set:
-      - name: mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '21'
-    - slot_was_set:
-      - age: '21'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_anxiety
-    - action: utter_knowmore
-    - intent: deny
-    - action: utter_checkin
-    - intent: bad_mood_anxiety
-      entities:
-      - feeling: stressed
-    - slot_was_set:
-      - feeling: stressed
-    - action: utter_badmood_anxiety
-    - intent: affirm
-    - action: utter_tell_more
-    - intent: tell_problem
-    - action: utter_understand
-    - action: utter_gif
-    - action: utter_suggestions_anxiety
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: anxiety first yes second no
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: mariana
-    - slot_was_set:
-      - name: mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '21'
-    - slot_was_set:
-      - age: '21'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_anxiety
-    - action: utter_knowmore
-    - intent: affirm
-    - action: utter_moreaboutanxiety
-    - action: utter_informsymptoms
-    - intent: affirm
-    - action: utter_anxietysymptoms
-    - intent: affirm
-    - action: utter_checkin
-    - intent: bad_mood_anxiety
-      entities:
-      - feeling: stressed
-    - slot_was_set:
-      - feeling: stressed
-    - action: utter_badmood_anxiety
-    - intent: deny
-    - action: utter_understand
-    - action: utter_gif
-    - action: utter_suggestions_anxiety
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: depression all yes
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: Mariana
-    - slot_was_set:
-      - name: Mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '23'
-    - slot_was_set:
-      - age: '23'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_depression
-    - action: utter_knowmore
-    - intent: affirm
-    - action: utter_moreaboutdepression
-    - action: utter_informsymptoms
-    - intent: affirm
-    - action: utter_depressionsymptoms
-    - intent: affirm
-    - action: utter_checkin
-    - intent: bad_mood_depression
-      entities:
-      - feeling: worthlessness
-    - slot_was_set:
-      - feeling: worthlessness
-    - action: utter_badmood_depression
-    - intent: affirm
-    - action: utter_tell_more
-    - intent: tell_problem
-    - action: utter_understand
-    - action: utter_understand_console
-    - action: utter_gif
-    - action: utter_suggestions_depression
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: depression a few no's
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: mariana
-    - slot_was_set:
-      - name: mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '23'
-    - slot_was_set:
-      - age: '23'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_depression
-    - action: utter_knowmore
-    - intent: deny
-    - action: utter_checkin
-    - intent: bad_mood_depression
-      entities:
-      - feeling: worthlessness
-    - slot_was_set:
-      - feeling: worthlessness
-    - action: utter_badmood_depression
-    - intent: deny
-    - action: utter_understand
-    - action: utter_understand_console
-    - action: utter_gif
-    - action: utter_suggestions_depression
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: depression first no second yes
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: Mariana
-    - slot_was_set:
-      - name: Mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '23'
-    - slot_was_set:
-      - age: '23'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_depression
-    - action: utter_knowmore
-    - intent: deny
-    - action: utter_checkin
-    - intent: bad_mood_depression
-      entities:
-      - feeling: worthlessness
-    - slot_was_set:
-      - feeling: worthlessness
-    - action: utter_badmood_depression
-    - intent: affirm
-    - action: utter_tell_more
-    - intent: tell_problem
-    - action: utter_understand
-    - action: utter_understand_console
-    - action: utter_gif
-    - action: utter_suggestions_depression
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: depression first yes second no
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: Mariana
-    - slot_was_set:
-      - name: Mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '23'
-    - slot_was_set:
-      - age: '23'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_depression
-    - action: utter_knowmore
-    - intent: affirm
-    - action: utter_moreaboutdepression
-    - action: utter_informsymptoms
-    - intent: affirm
-    - action: utter_depressionsymptoms
-    - intent: affirm
-    - action: utter_checkin
-    - intent: bad_mood_depression
-      entities:
-      - feeling: worthlessness
-    - slot_was_set:
-      - feeling: worthlessness
-    - action: utter_badmood_depression
-    - intent: deny
-    - action: utter_understand
-    - action: utter_understand_console
-    - action: utter_gif
-    - action: utter_suggestions_depression
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: bipolar all yes
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: Mariana
-    - slot_was_set:
-      - name: Mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '21'
-    - slot_was_set:
-      - age: '21'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_bipolar
-    - action: utter_knowmore
-    - intent: affirm
-    - action: utter_moreaboutbipolar
-    - action: utter_informsymptoms
-    - intent: affirm
-    - action: utter_bipolarsymptoms
-    - intent: affirm
-    - action: utter_checkin
-    - intent: bad_mood_bipolar
-      entities:
-      - feeling: restless
-    - slot_was_set:
-      - feeling: restless
-    - action: utter_badmood_bipolar
-    - intent: affirm
-    - action: utter_tell_more
-    - intent: tell_problem
-    - action: utter_understand_situation
-    - action: utter_gif
-    - action: utter_suggestions_bipolar
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: bipolar a few no's
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: mariana
-    - slot_was_set:
-      - name: mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '21'
-    - slot_was_set:
-      - age: '21'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_bipolar
-    - action: utter_knowmore
-    - intent: deny
-    - action: utter_checkin
-    - intent: bad_mood_bipolar
-      entities:
-      - feeling: restless
-    - slot_was_set:
-      - feeling: restless
-    - action: utter_badmood_bipolar
-    - intent: deny
-    - action: utter_understand
-    - action: utter_gif
-    - action: utter_suggestions_bipolar
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: bipolar first no second yes
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: mariana
-    - slot_was_set:
-      - name: mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '21'
-    - slot_was_set:
-      - age: '21'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_bipolar
-    - action: utter_knowmore
-    - intent: deny
-    - action: utter_checkin
-    - intent: bad_mood_bipolar
-      entities:
-      - feeling: restless
-    - slot_was_set:
-      - feeling: restless
-    - action: utter_badmood_bipolar
-    - intent: affirm
-    - action: utter_tell_more
-    - intent: tell_problem
-    - action: utter_understand
-    - action: utter_gif
-    - action: utter_suggestions_bipolar
-    - intent: affirm
-    - action: utter_until_next_time
-
-  - story: bipolar first yes second no
-    steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_askname
-    - intent: say_name
-      entities:
-      - name: mariana
-    - slot_was_set:
-      - name: mariana
-    - action: utter_askage
-    - intent: say_age
-      entities:
-      - age: '21'
-    - slot_was_set:
-      - age: '21'
-    - action: utter_askmoreinfo
-    - intent: affirm
-    - action: utter_askconditions
-    - intent: disease_bipolar
-    - action: utter_knowmore
-    - intent: affirm
-    - action: utter_moreaboutbipolar
-    - action: utter_informsymptoms
-    - intent: affirm
-    - action: utter_bipolarsymptoms
-    - intent: affirm
-    - action: utter_checkin
-    - intent: bad_mood_bipolar
-      entities:
-      - feeling: restless
-    - slot_was_set:
-      - feeling: restless
-    - action: utter_badmood_bipolar
-    - intent: deny
-    - action: utter_understand
-    - action: utter_gif
-    - action: utter_suggestions_bipolar
-    - intent: affirm
-    - action: utter_until_next_time
-
   # conversa inicial para obtenção de dados
   - story: initial conversation
     steps:
@@ -612,62 +31,59 @@ stories:
       - checkpoint: checkpoint_askdisease
       - intent: disease_anxiety
       - action: utter_knowmore
-      - checkpoint: knowmore 
-      - checkpoint: ask_symptoms 
-      - checkpoint: checkpoint_askmood
-      - checkpoint: tell_more
+      - checkpoint: knowmore_anxiety
 
   - story: more about disease
     steps:
-      - checkpoint: knowmore
+      - checkpoint: knowmore_anxiety
       - intent: affirm
       - action: utter_moreaboutanxiety
       - action: utter_informsymptoms
-      - checkpoint: ask_symptoms
+      - checkpoint: ask_symptoms_anxiety
 
   - story: yes symptoms
     steps:
-      - checkpoint: ask_symptoms
+      - checkpoint: ask_symptoms_anxiety
       - intent: affirm
       - action: utter_anxietysymptoms
       - intent: affirm
       - action: utter_checkin
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_anxiety
 
   - story: no symptoms
     steps:
-      - checkpoint: ask_symptoms
+      - checkpoint: ask_symptoms_anxiety
       - intent: deny
       - action: utter_checkin
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_anxiety
 
   - story: no more about disease
     steps:
-      - checkpoint: knowmore
+      - checkpoint: knowmore_anxiety
       - intent: deny
       - action: utter_checkin
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_anxiety
 
   - story: good mood
     steps:
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_anxiety
       - intent: mood_great
       - action: utter_happy
 
   - story: bad mood anxiety
     steps:
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_anxiety
       - intent: bad_mood_anxiety
         entities:
         - feeling: stressed
       - slot_was_set:
         - feeling: stressed
       - action: utter_badmood_anxiety
-      - checkpoint: tell_more
+      - checkpoint: tell_more_anxiety
 
   - story: tell more
     steps:
-      - checkpoint: tell_more
+      - checkpoint: tell_more_anxiety
       - intent: affirm
       - action: utter_tell_more
       - intent: tell_problem
@@ -679,7 +95,7 @@ stories:
 
   - story: no tell more
     steps:
-      - checkpoint: tell_more
+      - checkpoint: tell_more_anxiety
       - intent: deny
       - action: utter_understand
       - action: utter_gif
@@ -694,156 +110,144 @@ stories:
       - checkpoint: checkpoint_askdisease
       - intent: disease_bipolar
       - action: utter_knowmore
-      - checkpoint: knowmore 
-      - checkpoint: ask_symptoms 
-      - checkpoint: checkpoint_askmood
-      - checkpoint: tell_more
+      - checkpoint: knowmore_bipolar
   
   - story: more about disease
     steps:
-      - checkpoint: knowmore
+      - checkpoint: knowmore_bipolar
       - intent: affirm
       - action: utter_moreaboutbipolar
       - action: utter_informsymptoms
-      - checkpoint: ask_symptoms
+      - checkpoint: ask_symptoms_bipolar
 
   - story: no more about disease
     steps:
-      - checkpoint: knowmore
+      - checkpoint: knowmore_bipolar
       - intent: deny
       - action: utter_checkin
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_bipolar
 
   - story: yes symptoms
     steps:
-      - checkpoint: ask_symptoms
+      - checkpoint: ask_symptoms_bipolar
       - intent: affirm
       - action: utter_bipolarsymptoms
       - intent: affirm
       - action: utter_checkin
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_bipolar
 
   - story: no symptoms
     steps:
-      - checkpoint: ask_symptoms
+      - checkpoint: ask_symptoms_bipolar
       - intent: deny
       - action: utter_checkin
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_bipolar
   
   - story: good mood
     steps:
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_bipolar
       - intent: mood_great
       - action: utter_happy
 
   - story: bad mood bipolar
     steps:
-      - checkpoint: checkpoint_askmood
+      - checkpoint: checkpoint_askmood_bipolar
       - intent: bad_mood_bipolar
         entities:
         - feeling: stressed
       - slot_was_set:
         - feeling: stressed
       - action: utter_badmood_bipolar
-      - checkpoint: tell_more
+      - checkpoint: tell_more_bipolar
 
   - story: tell more
     steps:
-      - checkpoint: tell_more
+      - checkpoint: tell_more_bipolar
       - intent: affirm
       - action: utter_tell_more
       - intent: tell_problem
       - action: utter_understand_situation
       - action: utter_gif
-      - action: action_suggest_by_illness
+      - action: utter_suggestions_bipolar
       - intent: affirm
       - action: utter_until_next_time
 
   - story: no tell more
     steps:
-      - checkpoint: tell_more
+      - checkpoint: tell_more_bipolar
       - intent: deny
       - action: utter_understand
       - action: utter_gif
-      - action: action_suggest_by_illness
+      - action: utter_suggestions_bipolar
       - intent: affirm
       - action: utter_until_next_time
 
   # conversa adaptada à doença de depressão
-  # - story: depression adapted conversation
-  #   steps:
-  #     - checkpoint: checkpoint_askdisease
-  #     - intent: disease_depression
-  #     - action: utter_knowmore
-  #     - checkpoint: knowmore 
-  #     - checkpoint: ask_symptoms 
-  #     - checkpoint: checkpoint_askmood
-  #     - checkpoint: tell_more
-
-  # - story: more about disease
-  #   steps:
-  #     - checkpoint: knowmore
-  #     - intent: affirm
-  #     - action: utter_moreaboutdepression
-  #     - action: utter_informsymptoms
-  #     - checkpoint: ask_symptoms
-  
-  # - story: no more about disease
-  #   steps:
-  #     - checkpoint: knowmore
-  #     - intent: deny
-  #     - action: utter_checkin
-  #     - checkpoint: checkpoint_askmood
-
-  # - story: yes symptoms
-  #   steps:
-  #     - checkpoint: ask_symptoms
-  #     - intent: affirm
-  #     - action: utter_depressionsymptoms
-  #     - intent: affirm
-  #     - action: utter_checkin
-  #     - checkpoint: checkpoint_askmood
-
-  # - story: no symptoms
-  #   steps:
-  #     - checkpoint: ask_symptoms
-  #     - intent: deny
-  #     - action: utter_checkin
-  #     - checkpoint: checkpoint_askmood
-  
-  # - story: bad mood depression
-  #   steps:
-  #     - checkpoint: checkpoint_askmood
-  #     - intent: bad_mood_depression
-  #       entities:
-  #       - feeling: worthlessness
-  #     - slot_was_set:
-  #       - feeling: worthlessness
-  #     - action: utter_badmood_depression
-  #     - checkpoint: tell_more
-
-  # - story: tell more 
-  #   steps:
-  #     - checkpoint: tell_more
-  #     - intent: affirm
-  #     - action: utter_tell_more
-  #     - intent: tell_problem
-  #     - action: utter_understand_situation
-  #     - action: utter_understand_console
-  #     - action: utter_gif
-  #     - action: utter_suggestions_depression
-  #     - intent: affirm
-  #     - action: utter_until_next_time
-
-  # - story: no tell more
-  #   steps:
-  #     - checkpoint: tell_more
-  #     - intent: deny
-  #     - action: utter_understand
-  #     - action: utter_gif
-  #     - action: utter_suggestions_depression
-  #     - intent: affirm
-  #     - action: utter_until_next_time
+  - story: depression adapted conversation
+    steps:
+      - checkpoint: checkpoint_askdisease
+      - intent: disease_depression
+      - action: utter_knowmore
+      - checkpoint: knowmore_depression
+   
+  - story: more about depression
+    steps:
+      - checkpoint: knowmore_depression
+      - intent: affirm
+      - action: utter_moreaboutdepression
+      - action: utter_informsymptoms
+      - checkpoint: ask_symptoms_depression
+  - story: yes depression symptoms
+    steps:
+      - checkpoint: ask_symptoms_depression
+      - intent: affirm
+      - action: utter_depressionsymptoms
+      - intent: affirm
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood_depression
+  - story: no depression symptoms
+    steps:
+      - checkpoint: ask_symptoms_depression
+      - intent: deny
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood_depression
+  - story: no more about depression
+    steps:
+      - checkpoint: knowmore_depression
+      - intent: deny
+      - action: utter_checkin
+      - checkpoint: checkpoint_askmood_depression
+  - story: bad mood depression
+    steps:
+      - checkpoint: checkpoint_askmood_depression
+      - intent: bad_mood_depression
+        entities:
+        - feeling: sad
+      - slot_was_set:
+        - feeling: sad
+      - action: utter_badmood_depression
+      - checkpoint: tell_more_depression
+  - story: tell more depression
+    steps:
+      - checkpoint: tell_more_depression
+      - intent: affirm
+      - action: utter_tell_more
+      - intent: tell_problem
+      - action: utter_understand_situation
+      - action: utter_understand_console
+      - action: utter_gif
+      - action: utter_suggestions_depression
+      - intent: affirm
+      - action: utter_until_next_time
+  - story: no tell more depression
+    steps:
+      - checkpoint: tell_more_depression
+      - intent: deny
+      - action: utter_understand
+      - action: utter_gif
+      - action: utter_suggestions_depression
+      - intent: affirm
+      - action: utter_until_next_time
 
   # conversa adaptada a nenhuma das doenças diagnosticadas
   - story: no diagnosed disease
@@ -916,6 +320,589 @@ stories:
   #     - intent: info_treatment
   #     - action: utter_bipolar_treatment
 
+  #---------------------------------------------------------
+  # - story: anxiety all yes
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_anxiety
+  #   - action: utter_knowmore
+  #   - intent: affirm
+  #   - action: utter_moreaboutanxiety
+  #   - action: utter_informsymptoms
+  #   - intent: affirm
+  #   - action: utter_anxietysymptoms
+  #   - intent: affirm
+  #   - action: utter_checkin
+  #   - intent: bad_mood_anxiety
+  #     entities:
+  #     - feeling: stressed
+  #   - slot_was_set:
+  #     - feeling: stressed
+  #   - action: utter_badmood_anxiety
+  #   - intent: affirm
+  #   - action: utter_tell_more
+  #   - intent: tell_problem
+  #   - action: utter_understand_situation
+  #   - action: utter_gif
+  #   - action: utter_suggestions_anxiety
+  #   - intent: affirm
+  #   - action: utter_until_next_time
 
+  # - story: no disease - maybe anxiety  
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_none
+  #   - action: utter_checkperiod
+  #   - intent: dealing_with_illness
+  #     entities:
+  #     - illness: anxiety
+  #   - action: action_differentiate_illness
+  #   - action: utter_recommend_profissional_help
+  #   - action: action_show_image_support
+  #   - intent: affirm
+  #   - action: action_suggest_by_illness
+  #   - intent: affirm
+  #   - action: utter_until_next_time
 
-  
+  #-------------------------------------------------------
+  # - story: no disease maybe anxiety  
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: luísa
+  #   - slot_was_set:
+  #     - name: luísa
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '23'
+  #   - slot_was_set:
+  #     - age: '23'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_none
+  #   - action: utter_checkperiod
+  #   - intent: dealing_with_illness
+  #     entities:
+  #     - illness: anxiety
+  #   - slot_was_set:
+  #     - illness: anxiety
+  #   - action: action_differentiate_illness
+  #   - slot_was_set:
+  #     - illness: disease_anxiety
+  #   - action: utter_recommend_profissional_help
+  #   - action: action_show_image_support
+  #   - intent: affirm
+  #   - action: action_suggest_by_illness
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: no disease - maybe anxiety
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: josé
+  #   - slot_was_set:
+  #     - name: josé
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '66'
+  #   - slot_was_set:
+  #     - age: '66'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_none
+  #   - action: utter_checkperiod
+  #   - intent: dealing_with_illness
+  #     entities:
+  #     - illness: anxiety
+  #   - slot_was_set:
+  #     - illness: anxiety
+  #   - action: action_differentiate_illness
+  #   - slot_was_set:
+  #     - illness: disease_anxiety
+  #   - action: utter_recommend_profissional_help
+  #   - action: action_show_image_support
+  #   - intent: affirm
+  #   - action: action_suggest_by_illness
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # -------- INTERACTIVE ----------
+
+  # - story: anxiety a few no's
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_anxiety
+  #   - action: utter_knowmore
+  #   - intent: deny
+  #   - action: utter_checkin
+  #   - intent: bad_mood_anxiety
+  #     entities:
+  #     - feeling: stressed
+  #   - slot_was_set:
+  #     - feeling: stressed
+  #   - action: utter_badmood_anxiety
+  #   - intent: deny
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_anxiety
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: anxiety first no second yes
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_anxiety
+  #   - action: utter_knowmore
+  #   - intent: deny
+  #   - action: utter_checkin
+  #   - intent: bad_mood_anxiety
+  #     entities:
+  #     - feeling: stressed
+  #   - slot_was_set:
+  #     - feeling: stressed
+  #   - action: utter_badmood_anxiety
+  #   - intent: affirm
+  #   - action: utter_tell_more
+  #   - intent: tell_problem
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_anxiety
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: bipolar first yes second no
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_anxiety
+  #   - action: utter_knowmore
+  #   - intent: affirm
+  #   - action: utter_moreaboutanxiety
+  #   - action: utter_informsymptoms
+  #   - intent: affirm
+  #   - action: utter_anxietysymptoms
+  #   - intent: affirm
+  #   - action: utter_checkin
+  #   - intent: bad_mood_anxiety
+  #     entities:
+  #     - feeling: stressed
+  #   - slot_was_set:
+  #     - feeling: stressed
+  #   - action: utter_badmood_anxiety
+  #   - intent: deny
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_anxiety
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: depression all yes
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: Mariana
+  #   - slot_was_set:
+  #     - name: Mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '24'
+  #   - slot_was_set:
+  #     - age: '24'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_depression
+  #   - action: utter_knowmore
+  #   - intent: affirm
+  #   - action: utter_moreaboutdepression
+  #   - action: utter_informsymptoms
+  #   - intent: affirm
+  #   - action: utter_depressionsymptoms
+  #   - intent: affirm
+  #   - action: utter_checkin
+  #   - intent: mood_unhappy
+  #     entities:
+  #     - feeling: sad
+  #   - slot_was_set:
+  #     - feeling: sad
+  #   - intent: bad_mood_depression
+  #     entities:
+  #     - feeling: sad
+  #   - action: utter_badmood_depression
+  #   - intent: tell_problem
+  #   - action: utter_tell_more
+  #   - intent: tell_problem
+  #   - action: utter_understand_console
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_depression
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: depression a few no's
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_depression
+  #   - action: utter_knowmore
+  #   - intent: deny
+  #   - action: utter_checkin
+  #   - intent: bad_mood_depression
+  #     entities:
+  #     - feeling: worthlessness
+  #   - slot_was_set:
+  #     - feeling: worthlessness
+  #   - action: utter_badmood_depression
+  #   - intent: deny
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_depression
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: bipolar first no second yes
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_depression
+  #   - action: utter_knowmore
+  #   - intent: deny
+  #   - action: utter_checkin
+  #   - intent: bad_mood_depression
+  #     entities:
+  #     - feeling: worthlessness
+  #   - slot_was_set:
+  #     - feeling: worthlessness
+  #   - action: utter_badmood_depression
+  #   - intent: affirm
+  #   - action: utter_tell_more
+  #   - intent: tell_problem
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_depression
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: bipolar first yes second no
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_depression
+  #   - action: utter_knowmore
+  #   - intent: affirm
+  #   - action: utter_moreaboutdepression
+  #   - action: utter_informsymptoms
+  #   - intent: affirm
+  #   - action: utter_depressionsymptoms
+  #   - intent: affirm
+  #   - action: utter_checkin
+  #   - intent: bad_mood_depression
+  #     entities:
+  #     - feeling: worthlessness
+  #   - slot_was_set:
+  #     - feeling: worthelessness
+  #   - action: utter_badmood_depression
+  #   - intent: deny
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_depression
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: bipolar all yes
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: Mariana
+  #   - slot_was_set:
+  #     - name: Mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_bipolar
+  #   - action: utter_knowmore
+  #   - intent: affirm
+  #   - action: utter_moreaboutbipolar
+  #   - action: utter_informsymptoms
+  #   - intent: affirm
+  #   - action: utter_bipolarsymptoms
+  #   - intent: affirm
+  #   - action: utter_checkin
+  #   - intent: bad_mood_bipolar
+  #     entities:
+  #     - feeling: restless
+  #   - slot_was_set:
+  #     - feeling: restless
+  #   - action: utter_badmood_bipolar
+  #   - intent: affirm
+  #   - action: utter_tell_more
+  #   - intent: tell_problem
+  #   - action: utter_understand_situation
+  #   - action: utter_gif
+  #   - action: utter_suggestions_bipolar
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: bipolar a few no's
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_bipolar
+  #   - action: utter_knowmore
+  #   - intent: deny
+  #   - action: utter_checkin
+  #   - intent: bad_mood_bipolar
+  #     entities:
+  #     - feeling: restless
+  #   - slot_was_set:
+  #     - feeling: restless
+  #   - action: utter_badmood_bipolar
+  #   - intent: deny
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_bipolar
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: bipolar first no second yes
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_bipolar
+  #   - action: utter_knowmore
+  #   - intent: deny
+  #   - action: utter_checkin
+  #   - intent: bad_mood_bipolar
+  #     entities:
+  #     - feeling: restless
+  #   - slot_was_set:
+  #     - feeling: restless
+  #   - action: utter_badmood_bipolar
+  #   - intent: affirm
+  #   - action: utter_tell_more
+  #   - intent: tell_problem
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_bipolar
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
+  # - story: bipolar first yes second no
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - action: utter_askname
+  #   - intent: say_name
+  #     entities:
+  #     - name: mariana
+  #   - slot_was_set:
+  #     - name: mariana
+  #   - action: utter_askage
+  #   - intent: say_age
+  #     entities:
+  #     - age: '21'
+  #   - slot_was_set:
+  #     - age: '21'
+  #   - action: utter_askmoreinfo
+  #   - intent: affirm
+  #   - action: utter_askconditions
+  #   - intent: disease_bipolar
+  #   - action: utter_knowmore
+  #   - intent: affirm
+  #   - action: utter_moreaboutbipolar
+  #   - action: utter_informsymptoms
+  #   - intent: affirm
+  #   - action: utter_bipolarsymptoms
+  #   - intent: affirm
+  #   - action: utter_checkin
+  #   - intent: bad_mood_bipolar
+  #     entities:
+  #     - feeling: restless
+  #   - slot_was_set:
+  #     - feeling: restless
+  #   - action: utter_badmood_bipolar
+  #   - intent: deny
+  #   - action: utter_understand
+  #   - action: utter_gif
+  #   - action: utter_suggestions_bipolar
+  #   - intent: affirm
+  #   - action: utter_until_next_time
+
