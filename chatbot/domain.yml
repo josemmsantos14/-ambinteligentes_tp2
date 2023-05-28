@@ -55,6 +55,8 @@ entities:
 - age
 - illness
 responses:
+  utter_default:
+  - text: "I'm sorry, I didn't understand that. Can you please rephrase?"
   utter_greet:
   - text: Hey! I'm Tcheery! :)
   - text: Hello! I'm Tcheery! :)
